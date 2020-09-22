@@ -1,0 +1,38 @@
+{
+  "author": "Matthew Davidson",
+  "authors": [],
+  "description": "Satori Generators - abstractions for composition and CV generation",
+  "displayname": "",
+  "extends": "",
+  "extensible": 0,
+  "homepatcher": "satori_generators_launch.maxpat",
+  "max_version_max": "none",
+  "max_version_min": "8.1",
+  "name": "Satori Generrators",
+  "os": {
+    "macintosh": {
+      "platform": [
+        "ia32",
+        "x64"
+      ],
+      "min_version": "10.7.x"
+    },
+    "windows": {
+      "platform": [
+        "ia32",
+        "x64"
+      ],
+      "min_version": "none"
+    }
+  },
+  "package_extra": {},
+  "tags": [
+    "computer-assisted composition",
+    "composition",
+    "CV",
+    "score",  "abstractions", "snippets",
+    "generation"
+  ],
+  "version": 0.1,
+  "website": "http://www.github.com/stretta/satori_generators"
+}

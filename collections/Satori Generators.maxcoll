@@ -1,0 +1,5 @@
+{
+	"name" : "Satori Generators",
+	"type" : "filelist",
+	"contents" : [ "Arbitrary Break Point Envelope Generator.maxsnip", "Autofade.maxsnip", "Calibrration.maxsnip", "Cross Modulated LFO.maxsnip", "Decay.maxsnip", "Global Transport.maxsnip", "Grid Edit.maxsnip", "Smøl Sequencer.maxsnip", "High Low Transition.maxsnip", "Locked Recorder.maxsnip", "MIDI Input.maxsnip", "MIDI Output.maxsnip", "Polyrhythm Voice.maxsnip", "Presets.maxsnip", "Sequenced AHR.maxsnip", "Smøl Editor.maxsnip", "Sound-on-sound Recorder.maxsnip", "Step Entry.maxsnip", "Swing.maxsnip", "Tuner.maxsnip", "Wiggly Sine.maxsnip" ]
+}
