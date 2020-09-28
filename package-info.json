@@ -8,7 +8,7 @@
   "homepatcher": "satori_generators_launch.maxpat",
   "max_version_max": "none",
   "max_version_min": "8.1",
-  "name": "Satori Generrators",
+  "name": "Satori Generators",
   "os": {
     "macintosh": {
       "platform": [
@@ -34,5 +34,5 @@
     "generation"
   ],
   "version": 0.1,
-  "website": "http://www.github.com/stretta/satori_generators"
+  "website": "https://github.com/stretta/Satori-Generators"
 }
