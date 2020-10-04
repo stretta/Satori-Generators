@@ -1,0 +1,47 @@
+{
+	"patcher" : 	{
+		"boxes" : [ 			{
+				"box" : 				{
+					"maxclass" : "bpatcher",
+					"annotation" : "A stereo/dual mono audio output chooser.",
+					"varname" : "AudioOutput",
+					"viewvisibility" : 1,
+					"offset" : [ 0.0, 0.0 ],
+					"lockeddragscroll" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"bgmode" : 0,
+					"border" : 0,
+					"name" : "bp.CVOutput.maxpat",
+					"numinlets" : 3,
+					"id" : "obj-11",
+					"numoutlets" : 3,
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 10.0, 10.0, 69.0, 29.0 ]
+				}
+
+			}
+ ],
+		"appversion" : 		{
+			"major" : 8,
+			"minor" : 1,
+			"revision" : 6,
+			"architecture" : "x64",
+			"modernui" : 1
+		}
+,
+		"classnamespace" : "box",
+		"description" : "69 x 29, containing 1 object",
+		"tags" : "",
+		"snippetinfo" : 		{
+			"name" : "CV Output",
+			"objects" : "jpatcher",
+			"tags" : "",
+			"description" : "69 x 29, containing 1 object",
+			"image" : "iVBORw0KGgoAAAANSUhEUgAAAEUAAAAdCAYAAAD8UKGzAAAABHNCSVQICAgIfAhkiAAAAlpJREFUWIXtmU+rMVEcx7/n0CRS7JSUFZI/C00WsmNhZ42Nt+EFeA9WXoBsKRaKLfkzWNtQUpSwmGHmLp6uh/tMZtx7h6lnPqszvzpnvn3mnNM5Den3+xLHceB5Hv87DMMgEomAGkL+wvM8JpMJqCHkHp7nQd8dQo8YUmQwpMhgSJHBkCKDIUUGs5aDN5tNLYf/MZlMRrauqZRHL343jz6Y6uUjiiIOhwMkSfqVUHpGcaYIgoBWq4X5fI7L5QKGYZBIJBCPx1+R7y0oSun1euA4Dh6PBz6fD+PxGJ1OB3a7HcFg8BUZn2a5XKJcLuN8Pt/VzWYzSqUS3G73w/6Ky2c2m8HhcCCfz4NlWRQKBVBKMRwOf5ZcQ9xuN7LZ7D/1bDarKARQkHI6nXA8HuH1eq81i8UCl8uF7Xb7fNoXkkql4Pf7r89+vx+pVEpV34dSLBYLTCYT1uv1tXY+n7HZbGC3278Z9zUQQlAsFmG1WmG1WlEsFkEIUdX34Z5CKUUwGATHcWi32/B6vZhOpxAEAaFQSHVAQRAwmUwQi8Ww2+2wXq8RCASwWCyuM08LnE4ncrncta0WxT0lnU4jGo1iNBqhXq9jsVggmUwiFoupfslqtUK1WsV+v8dgMECtVgMANBoNdLtd1eN8B5ZlwbLsU31IpVJRdfCQJAmn0wk2m0314M1m83p4E0URlNK7tiiKIISonta/yW22r6g+0RJCnhLylU8ht+3bmp7Q/Jiv9/uPHJpK0eu9Rwl9zt83Y0iRwZAigyFFBsowzLsz6AqGYUDD4TAMMX/4/Jf8AbLwvgAaBY4uAAAAAElFTkSuQmCC"
+		}
+
+	}
+
+}
