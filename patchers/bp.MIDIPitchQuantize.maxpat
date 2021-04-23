@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 725.0, 79.0, 886.0, 761.0 ],
+		"rect" : [ 520.0, 79.0, 820.0, 761.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -445,7 +445,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 338.25, 437.651361346244812, 64.0, 22.0 ],
+					"patching_rect" : [ 293.25, 426.651361346244812, 64.0, 22.0 ],
 					"text" : "bp.bintopc"
 				}
 
@@ -1368,6 +1368,8 @@
 					"fontsize" : 9.5,
 					"id" : "obj-50",
 					"maxclass" : "number",
+					"maximum" : 127,
+					"minimum" : -127,
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
@@ -1379,8 +1381,9 @@
 						"valueof" : 						{
 							"parameter_invisible" : 1,
 							"parameter_longname" : "number[19]",
+							"parameter_mmin" : -127.0,
 							"parameter_shortname" : "number",
-							"parameter_type" : 3
+							"parameter_type" : 1
 						}
 
 					}
@@ -1444,8 +1447,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 232.25, 468.0, 125.0, 22.0 ],
-					"text" : "listnearest"
+					"patching_rect" : [ 232.25, 468.0, 80.0, 22.0 ],
+					"text" : "bp.listnearest"
 				}
 
 			}
@@ -1559,7 +1562,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-18",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -1738,7 +1741,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-4",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -1750,11 +1753,11 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-3",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 235.25, 16.5, 30.0, 30.0 ]
 				}
 
@@ -2115,7 +2118,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-8", 0 ],
-					"midpoints" : [ 671.083329677581787, 262.075680673122406, 347.75, 262.075680673122406 ],
+					"midpoints" : [ 671.083329677581787, 293.075680673122406, 302.75, 293.075680673122406 ],
 					"order" : 1,
 					"source" : [ "obj-563", 0 ]
 				}
@@ -2187,7 +2190,65 @@
 				}
 
 			}
- ]
+ ],
+		"parameters" : 		{
+			"obj-14" : [ "live.text[30]", "live.text", 0 ],
+			"obj-15" : [ "live.numbox[31]", "live.numbox", 0 ],
+			"obj-21" : [ "live.text[29]", "live.text[1]", 0 ],
+			"obj-50" : [ "number[19]", "number", 0 ],
+			"obj-563::obj-3" : [ "live.tab", "live.tab", 0 ],
+			"obj-563::obj-556::obj-28" : [ "1161_pitch-bin", "1696_pitch-bin", 0 ],
+			"parameterbanks" : 			{
+
+			}
+,
+			"inherited_shortname" : 1
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "bp.listnearest.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/Satori Generators/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.kspitch.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
+				"patcherrelativepath" : "../../hin/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.bintoks.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
+				"patcherrelativepath" : "../../hin/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.kstobin.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
+				"patcherrelativepath" : "../../hin/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.bintopc.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
+				"patcherrelativepath" : "../../hin/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.pctobin.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
+				"patcherrelativepath" : "../../hin/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }
