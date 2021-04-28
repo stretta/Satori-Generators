@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 330.0, 79.0, 638.0, 731.0 ],
+		"rect" : [ 313.0, 98.0, 638.0, 606.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,19 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 171.5, 40.0, 153.0, 47.0 ],
+					"presentation_linecount" : 3,
+					"text" : "Rotate and transpose messages are summed with the bias value."
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"bgmode" : 0,
 					"border" : 0,
@@ -85,12 +98,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-25",
-					"linecount" : 4,
+					"linecount" : 5,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 330.0, 359.0, 153.0, 60.0 ],
-					"text" : "Rotational transposition. If a diatonic scale is specified,  the result is diatonic transpositoin.  "
+					"patching_rect" : [ 325.0, 326.0, 153.0, 74.0 ],
+					"text" : "Rotational transposition bias value. If a diatonic scale is specified,  the result is diatonic transpositoin.  "
 				}
 
 			}
@@ -101,7 +114,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.0, 386.0, 123.0, 33.0 ],
+					"patching_rect" : [ 13.0, 386.0, 123.0, 33.0 ],
 					"text" : "Chromatic transpose bias (post quantize)"
 				}
 
@@ -112,7 +125,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 14.0, 421.0, 150.0, 20.0 ],
+					"patching_rect" : [ 13.0, 421.0, 150.0, 20.0 ],
 					"text" : "Hold will sustain all notes"
 				}
 
@@ -123,7 +136,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 330.0, 427.0, 150.0, 20.0 ],
+					"patching_rect" : [ 325.0, 399.0, 150.0, 20.0 ],
 					"text" : "Panic sends all notes off"
 				}
 
@@ -134,7 +147,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 178.0, 701.0, 59.0, 22.0 ],
+					"patching_rect" : [ 178.0, 663.0, 59.0, 22.0 ],
 					"text" : "dac~"
 				}
 
@@ -151,7 +164,7 @@
 					"numoutlets" : 8,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal", "", "list", "int", "", "", "" ],
-					"patching_rect" : [ 178.0, 580.0, 300.0, 100.0 ],
+					"patching_rect" : [ 178.0, 542.0, 300.0, 100.0 ],
 					"save" : [ "#N", "vst~", "loaduniqueid", 0, "C74_VST:/FM8", ";" ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
@@ -187,7 +200,7 @@
 							"isbase64" : 1,
 							"sliderorder" : [  ],
 							"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-							"blob" : "1872.CMlaKA....fQPMDZ....A3TZlgC...P......5TY2M0a04FY.............................b.ETb........P.....nMWZtE..........6VAV0kzeJ8Omw1ljnVnPvZI.........DMURNYG...P.....HA.........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....A....D....................PChUVgA....f.bP.......A....D....................v.....v..L..C......................D....P..........PzTI4TY....BY........P.....nMWZtE..........zaKiH+dDBATkoDwBhNKT30F.........DMURNUF...P.....z..........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....B....D......H....D....fB....w.fK.PC.t.PL.3B.w.PM.jC.4.P.....C..........QSkjSrA...fZ.........A....f1bo4V..........Dxyy6vuzfD8otPBjTed...dA........PzTI4Da....A....fA.........DMURNE....P.....A....D....f.....A..........B....NAPY.bG.SAva.TG.tA.Y.b....fa.7F.zA.H.LG.kA.c......................................................P.....A....L....fQ.zD.3............b....vA....bA.P.LF.uA.a.7F.xAP.....v.PD....bA.P.PF.kAfc.jF.iAPY.PG.4A.b.TF.lA.a.DF.mAvb.D.....L.r.....W..D.yAva.TG.tA.Y.PG.4A.b.TF.A.....C.G....vE..A.c.TF.sA.b.7F.A.....C.F....vE..Afc.TF.xA.a.T....PL.3B.2.fK.fC.F....vE..Afc.TF.xAPa.T....PL.3B.2.fK.fC.G....vE..Afc.jF.yAPZ.HF.A.....C.A.........f.....DMURNkG....Z.........D.....ZyklaA.........vRryIZrTDQNonH6f5WYANA3..........QSkjS4A...D.....F.........PzTI4T.....A....D....P.....A.........P..........D.....QSkjSzA...D2.........A....f1bo4V..........D7GwfgPopTSyRbmFcwyB2cPC........PzTI4Dc....A....fx.........DMURNMG...P.....X..........QSkjSA....D....P.....A....DPuO...uK...HPuO..X..P.fTv.nMWZtAzA.A.DFSVm3zgWHgUhNyJ9.6EBlhAPT.B.CPzTI4DPi.9AC.D..sA.sABBAj1CfP.H..zHfOvTPnjAYMGGvfTpCpbGrBZ0oBVNfdBv2.zKfewY.MR.w6.HbAB..T.HCDvXL.BAf..BzMmbvUDNMYzyfr.A7NB..b.HGX.YkYVX0wFcfigBfnB.+.t.CLPP...ff7..fBxAfu....OHW.zG.C..f.xC.C.XWT.P...RBA.3D..PO.z.fewGfA.H6ANAC.D..OA3C..PS.N..LPyLyrOfvv.+nYlY.zE.O.3.bAHJ.9Aa.zD.A.3Gb.P..xDfsJP..xBfM.P..zB.A.HiCF..+.PG.z.fO...+.PG.z..C.PK.7..A.vK.7A.A.3Cr.P..zCfO..f7PveB7A.fb3NLG3e..3.7N3N..PeAz..CPPOG79.s.PC..nfLHPG.D..PKHK.fkfL.3C..v+.zA.M.v..zLfe7Rf...A.L.fr.f..f..C.fN.dG..N.r.f+f2wKfGB..PA3gnB3v.PvC.tB..1T.V.3..fPFB9EC.tG..d+YARVh.TPREf9CAzAfWECCUMPmEf9CA5Y.gG3.DH3Nw.3A..HzQ..+XlYlA1.fOFCf...vQB6A3uP.QGH..tOLHpvfCfU.B.niAH.fiCCfLFAvIL..XHX5ZBV.N.PVAdPL.xXfCPSfCO...EH..947Cv+feA..PPPQn.BxL....jL....7HTJfLP.vKjXXCP.fDffhCxAfHfPUBnAfl.H2.ZBffDnIrxEfl..F.N.IrBAfNAH..ZB.hDnF.5DfK7SfuD..DAnTMvZtElXAECv.D.f..B..jAnQLvXz4VZLsX.QbBHT.B.rBhRbD.nBI9DOvTh.+QSa.7Bf2O.f2K.A.B..Bv.ykVcmIDI.f9HwAL.AcN.Y.BCifIXCLhzfAvAmAGcikEUMUDPLrPChUVgA.........P......D.........."
+							"blob" : "1872.CMlaKA....fQPMDZ....A3TZlgC...P......5TY2M0a04FY.............................b.ETb........P.....nMWZtE..........dcadtTaAFQLq9nUbvMi0cZI.........DMURNYG...P.....HA.........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....A....D....................PChUVgA....f.bP.......A....D....................v.....v..L..C......................D....P..........PzTI4TY....BY........P.....nMWZtE..........yuNII9v5FkWnFvsShBNmR2F.........DMURNUF...P.....z..........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....B....D......H....D....fB....w.fK.PC.t.PL.3B.w.PM.jC.4.P.....C..........QSkjSrA...fZ.........A....f1bo4V..........D8.nfziiwzKtlhmnc5xoHGdA........PzTI4Da....A....fA.........DMURNE....P.....A....D....f.....A..........B....NAPY.bG.SAva.TG.tA.Y.b....fa.7F.zA.H.LG.kA.c.................................................D....P.....A....L....fQ.zD.3............b....vA....bA.P.LF.uA.a.7F.xAP.....v.PD....bA.P.PF.kAfc.jF.iAPY.PG.4A.b.TF.lA.a.DF.mAvb.D....PL.r.....W..D.yAva.TG.tA.Y.PG.4A.b.TF.A.....C.G....vE..A.c.TF.sA.b.7F.A.....C.F....vE..Afc.TF.xA.a.T....PL.3B.2.fK.fC.F....vE..Afc.TF.xAPa.T....PL.3B.2.fK.fC.G....vE..Afc.jF.yAPZ.HF.A.....C.A.........f.....DMURNkG....Z.........D.....ZyklaA.........vK.Yy28AERf.6iJaB1xIDG3..........QSkjS4A...D.....F.........PzTI4T.....A....D....P.....A.........P..........D.....QSkjSzA...D2.........A....f1bo4V..........TVWouTJ84j2hFSAXo82RMRPC........PzTI4Dc....A....fx.........DMURNMG...P.....X..........QSkjSA....D....P.....A....DPuO...uK...HPuO..X..P.fTv.nMWZtAzA.A.DqeAcZK1bC8RhR.w3a+XksfAPT.B.CPzTI4DPi.9AC.D..sA.sABBAj1CfP.H..zHfOvTPjR2MDcYVJTwMNO70qW4ubdNfdBv2.zKfewY.MR.w6.HbAB..T.HCDvXL.BAf..BzMmbvUDNMYzyfr.A7NB..b.HGX.YkYVX0wFcfigBfnB.+.t.CLPP...ff7..fBxAfu....OHW.zG.C..f.xC.C.XWT.P...RBA.3D..PO.z.fewGfA.H6ANAC.D..OA3C..PS.N..LPyLyrOfvv.+nYlY.zE.O.3.bAHJ.9Aa.zD.A.3Gb.P..xDfsJP..xBfM.P..zB.A.HiCF..+.PG.z.fO...+.PG.z..C.PK.7..A.vK.7A.A.3Cr.P..zCfO..f7PveB7A.fb3NLG3e..3.7N3N..PeAz..CPPOG79.s.PC..nfLHPG.D..PKHK.fkfL.3C..v+.zA.M.v..zLfe7Rf...A.L.fr.f..f..C.fN.dG..N.r.f+f2wKfGB..PA3gnB3v.PvC.tB..1T.V.3..fPFB9EC.tG..d+YARVh.TPREf9CAzAfWECCUMPmEf9CA5Y.gG3.DH3Nw.3A..HzQ..+XlYlA1.fOFCf...vQB6A3uP.QGH..tOLHpvfCfU.B.niAH.fiCCfLFAvIL..XHX5ZBV.N.PVAdPL.xXfCPSfCO...EH..947Cv+feA..PPPQn.BxL....jL....7HTJfLP.vKjXXCP.fDffhCxAfHfPUBnAfl.H2.ZBffDnIrxEfl..F.N.IrBAfNAH..ZB.hDnF.5DfK7SfuD..DAnTMvZtElXAECv.D.f..B..jAnQLvXz4VZLsX.QbBHT.B.rBhRbD.nBI9DOvTh.+QSa.7Bf2O.f2K.A.B..Bv.ykVcmIDI.f9HwAL.AcN.Y.BCifIXCLhzfAvAmAGcikEUMUDPLrPChUVgA.........P......D.........."
 						}
 ,
 						"snapshotlist" : 						{
@@ -211,7 +224,7 @@
 										"isbase64" : 1,
 										"sliderorder" : [  ],
 										"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-										"blob" : "1872.CMlaKA....fQPMDZ....A3TZlgC...P......5TY2M0a04FY.............................b.ETb........P.....nMWZtE..........6VAV0kzeJ8Omw1ljnVnPvZI.........DMURNYG...P.....HA.........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....A....D....................PChUVgA....f.bP.......A....D....................v.....v..L..C......................D....P..........PzTI4TY....BY........P.....nMWZtE..........zaKiH+dDBATkoDwBhNKT30F.........DMURNUF...P.....z..........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....B....D......H....D....fB....w.fK.PC.t.PL.3B.w.PM.jC.4.P.....C..........QSkjSrA...fZ.........A....f1bo4V..........Dxyy6vuzfD8otPBjTed...dA........PzTI4Da....A....fA.........DMURNE....P.....A....D....f.....A..........B....NAPY.bG.SAva.TG.tA.Y.b....fa.7F.zA.H.LG.kA.c......................................................P.....A....L....fQ.zD.3............b....vA....bA.P.LF.uA.a.7F.xAP.....v.PD....bA.P.PF.kAfc.jF.iAPY.PG.4A.b.TF.lA.a.DF.mAvb.D.....L.r.....W..D.yAva.TG.tA.Y.PG.4A.b.TF.A.....C.G....vE..A.c.TF.sA.b.7F.A.....C.F....vE..Afc.TF.xA.a.T....PL.3B.2.fK.fC.F....vE..Afc.TF.xAPa.T....PL.3B.2.fK.fC.G....vE..Afc.jF.yAPZ.HF.A.....C.A.........f.....DMURNkG....Z.........D.....ZyklaA.........vRryIZrTDQNonH6f5WYANA3..........QSkjS4A...D.....F.........PzTI4T.....A....D....P.....A.........P..........D.....QSkjSzA...D2.........A....f1bo4V..........D7GwfgPopTSyRbmFcwyB2cPC........PzTI4Dc....A....fx.........DMURNMG...P.....X..........QSkjSA....D....P.....A....DPuO...uK...HPuO..X..P.fTv.nMWZtAzA.A.DFSVm3zgWHgUhNyJ9.6EBlhAPT.B.CPzTI4DPi.9AC.D..sA.sABBAj1CfP.H..zHfOvTPnjAYMGGvfTpCpbGrBZ0oBVNfdBv2.zKfewY.MR.w6.HbAB..T.HCDvXL.BAf..BzMmbvUDNMYzyfr.A7NB..b.HGX.YkYVX0wFcfigBfnB.+.t.CLPP...ff7..fBxAfu....OHW.zG.C..f.xC.C.XWT.P...RBA.3D..PO.z.fewGfA.H6ANAC.D..OA3C..PS.N..LPyLyrOfvv.+nYlY.zE.O.3.bAHJ.9Aa.zD.A.3Gb.P..xDfsJP..xBfM.P..zB.A.HiCF..+.PG.z.fO...+.PG.z..C.PK.7..A.vK.7A.A.3Cr.P..zCfO..f7PveB7A.fb3NLG3e..3.7N3N..PeAz..CPPOG79.s.PC..nfLHPG.D..PKHK.fkfL.3C..v+.zA.M.v..zLfe7Rf...A.L.fr.f..f..C.fN.dG..N.r.f+f2wKfGB..PA3gnB3v.PvC.tB..1T.V.3..fPFB9EC.tG..d+YARVh.TPREf9CAzAfWECCUMPmEf9CA5Y.gG3.DH3Nw.3A..HzQ..+XlYlA1.fOFCf...vQB6A3uP.QGH..tOLHpvfCfU.B.niAH.fiCCfLFAvIL..XHX5ZBV.N.PVAdPL.xXfCPSfCO...EH..947Cv+feA..PPPQn.BxL....jL....7HTJfLP.vKjXXCP.fDffhCxAfHfPUBnAfl.H2.ZBffDnIrxEfl..F.N.IrBAfNAH..ZB.hDnF.5DfK7SfuD..DAnTMvZtElXAECv.D.f..B..jAnQLvXz4VZLsX.QbBHT.B.rBhRbD.nBI9DOvTh.+QSa.7Bf2O.f2K.A.B..Bv.ykVcmIDI.f9HwAL.AcN.Y.BCifIXCLhzfAvAmAGcikEUMUDPLrPChUVgA.........P......D.........."
+										"blob" : "1872.CMlaKA....fQPMDZ....A3TZlgC...P......5TY2M0a04FY.............................b.ETb........P.....nMWZtE..........dcadtTaAFQLq9nUbvMi0cZI.........DMURNYG...P.....HA.........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....A....D....................PChUVgA....f.bP.......A....D....................v.....v..L..C......................D....P..........PzTI4TY....BY........P.....nMWZtE..........yuNII9v5FkWnFvsShBNmR2F.........DMURNUF...P.....z..........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....B....D......H....D....fB....w.fK.PC.t.PL.3B.w.PM.jC.4.P.....C..........QSkjSrA...fZ.........A....f1bo4V..........D8.nfziiwzKtlhmnc5xoHGdA........PzTI4Da....A....fA.........DMURNE....P.....A....D....f.....A..........B....NAPY.bG.SAva.TG.tA.Y.b....fa.7F.zA.H.LG.kA.c.................................................D....P.....A....L....fQ.zD.3............b....vA....bA.P.LF.uA.a.7F.xAP.....v.PD....bA.P.PF.kAfc.jF.iAPY.PG.4A.b.TF.lA.a.DF.mAvb.D....PL.r.....W..D.yAva.TG.tA.Y.PG.4A.b.TF.A.....C.G....vE..A.c.TF.sA.b.7F.A.....C.F....vE..Afc.TF.xA.a.T....PL.3B.2.fK.fC.F....vE..Afc.TF.xAPa.T....PL.3B.2.fK.fC.G....vE..Afc.jF.yAPZ.HF.A.....C.A.........f.....DMURNkG....Z.........D.....ZyklaA.........vK.Yy28AERf.6iJaB1xIDG3..........QSkjS4A...D.....F.........PzTI4T.....A....D....P.....A.........P..........D.....QSkjSzA...D2.........A....f1bo4V..........TVWouTJ84j2hFSAXo82RMRPC........PzTI4Dc....A....fx.........DMURNMG...P.....X..........QSkjSA....D....P.....A....DPuO...uK...HPuO..X..P.fTv.nMWZtAzA.A.DqeAcZK1bC8RhR.w3a+XksfAPT.B.CPzTI4DPi.9AC.D..sA.sABBAj1CfP.H..zHfOvTPjR2MDcYVJTwMNO70qW4ubdNfdBv2.zKfewY.MR.w6.HbAB..T.HCDvXL.BAf..BzMmbvUDNMYzyfr.A7NB..b.HGX.YkYVX0wFcfigBfnB.+.t.CLPP...ff7..fBxAfu....OHW.zG.C..f.xC.C.XWT.P...RBA.3D..PO.z.fewGfA.H6ANAC.D..OA3C..PS.N..LPyLyrOfvv.+nYlY.zE.O.3.bAHJ.9Aa.zD.A.3Gb.P..xDfsJP..xBfM.P..zB.A.HiCF..+.PG.z.fO...+.PG.z..C.PK.7..A.vK.7A.A.3Cr.P..zCfO..f7PveB7A.fb3NLG3e..3.7N3N..PeAz..CPPOG79.s.PC..nfLHPG.D..PKHK.fkfL.3C..v+.zA.M.v..zLfe7Rf...A.L.fr.f..f..C.fN.dG..N.r.f+f2wKfGB..PA3gnB3v.PvC.tB..1T.V.3..fPFB9EC.tG..d+YARVh.TPREf9CAzAfWECCUMPmEf9CA5Y.gG3.DH3Nw.3A..HzQ..+XlYlA1.fOFCf...vQB6A3uP.QGH..tOLHpvfCfU.B.niAH.fiCCfLFAvIL..XHX5ZBV.N.PVAdPL.xXfCPSfCO...EH..947Cv+feA..PPPQn.BxL....jL....7HTJfLP.vKjXXCP.fDffhCxAfHfPUBnAfl.H2.ZBffDnIrxEfl..F.N.IrBAfNAH..ZB.hDnF.5DfK7SfuD..DAnTMvZtElXAECv.D.f..B..jAnQLvXz4VZLsX.QbBHT.B.rBhRbD.nBI9DOvTh.+QSa.7Bf2O.f2K.A.B..Bv.ykVcmIDI.f9HwAL.AcN.Y.BCifIXCLhzfAvAmAGcikEUMUDPLrPChUVgA.........P......D.........."
 									}
 ,
 									"fileref" : 									{
@@ -241,7 +254,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 178.0, 533.0, 107.0, 22.0 ],
+					"patching_rect" : [ 178.0, 495.0, 107.0, 22.0 ],
 					"text" : "prepend midievent"
 				}
 
@@ -253,7 +266,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 178.0, 488.0, 61.0, 22.0 ],
+					"patching_rect" : [ 178.0, 450.0, 61.0, 22.0 ],
 					"text" : "zl group 3"
 				}
 
@@ -356,7 +369,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "int" ],
-					"patching_rect" : [ 178.0, 277.0, 140.0, 148.0 ],
+					"patching_rect" : [ 178.0, 277.0, 140.0, 142.0 ],
 					"varname" : "bp.MIDIQuantize",
 					"viewvisibility" : 1
 				}
@@ -467,12 +480,13 @@
 			"obj-1::obj-14" : [ "live.text", "live.text", 0 ],
 			"obj-1::obj-15" : [ "live.numbox", "live.numbox", 0 ],
 			"obj-1::obj-21" : [ "live.text[1]", "live.text[1]", 0 ],
+			"obj-1::obj-32" : [ "live.text[2]", "live.text[2]", 0 ],
 			"obj-1::obj-50" : [ "number", "number", 0 ],
 			"obj-1::obj-563::obj-3" : [ "live.tab[1]", "live.tab", 0 ],
-			"obj-1::obj-563::obj-556::obj-28" : [ "1076_pitch-bin", "1217_pitch-bin", 0 ],
+			"obj-1::obj-563::obj-556::obj-28" : [ "1076_pitch-bin", "1393_pitch-bin", 0 ],
 			"obj-2::obj-14" : [ "refresh[2]", "refresh", 0 ],
 			"obj-563::obj-3" : [ "live.tab", "live.tab", 0 ],
-			"obj-563::obj-556::obj-28" : [ "1097_pitch-bin", "1210_pitch-bin", 0 ],
+			"obj-563::obj-556::obj-28" : [ "1097_pitch-bin", "1346_pitch-bin", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -488,6 +502,15 @@
 ,
 				"obj-1::obj-21" : 				{
 					"parameter_longname" : "live.text[1]"
+				}
+,
+				"obj-1::obj-32" : 				{
+					"parameter_invisible" : 0,
+					"parameter_longname" : "live.text[2]",
+					"parameter_modmode" : 0,
+					"parameter_shortname" : "live.text[2]",
+					"parameter_type" : 2,
+					"parameter_unitstyle" : 10
 				}
 ,
 				"obj-1::obj-563::obj-3" : 				{
