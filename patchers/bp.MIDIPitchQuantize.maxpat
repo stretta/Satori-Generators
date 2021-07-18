@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 232.0, 102.0, 1022.0, 898.0 ],
+		"rect" : [ 192.0, 154.0, 1022.0, 645.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -974,18 +974,6 @@
 					"outlettype" : [ "bang", "bang", "", "", "" ],
 					"patching_rect" : [ 708.583329677581787, 232.651366233825684, 61.0, 22.0 ],
 					"text" : "t b b l l l"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-41",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 827.0, 112.0, 72.0, 22.0 ],
-					"text" : "prepend set"
 				}
 
 			}
@@ -2524,7 +2512,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-18",
-					"index" : 2,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -2703,7 +2691,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-4",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -2715,11 +2703,11 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-3",
-					"index" : 1,
+					"index" : 0,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
+					"outlettype" : [ "" ],
 					"patching_rect" : [ 386.25, 81.0, 30.0, 30.0 ]
 				}
 
@@ -2871,16 +2859,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-41", 0 ],
-					"order" : 0,
-					"source" : [ "obj-17", 2 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-563", 0 ],
-					"order" : 1,
 					"source" : [ "obj-17", 2 ]
 				}
 
@@ -3250,7 +3229,66 @@
 				}
 
 			}
- ]
+ ],
+		"parameters" : 		{
+			"obj-14" : [ "live.text", "live.text", 0 ],
+			"obj-15" : [ "live.numbox", "live.numbox", 0 ],
+			"obj-21" : [ "live.text[1]", "live.text[1]", 0 ],
+			"obj-32" : [ "live.text[2]", "live.text[2]", 0 ],
+			"obj-50" : [ "number", "number", 0 ],
+			"obj-563::obj-3" : [ "live.tab", "live.tab", 0 ],
+			"obj-563::obj-556::obj-28" : [ "1190_pitch-bin", "1190_pitch-bin", 0 ],
+			"parameterbanks" : 			{
+
+			}
+,
+			"inherited_shortname" : 1
+		}
+,
+		"dependency_cache" : [ 			{
+				"name" : "bp.listnearest.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/Satori Generators/patchers",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.kspitch.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
+				"patcherrelativepath" : "../../hin/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.bintoks.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
+				"patcherrelativepath" : "../../hin/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.kstobin.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
+				"patcherrelativepath" : "../../hin/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.bintopc.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
+				"patcherrelativepath" : "../../hin/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.pctobin.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
+				"patcherrelativepath" : "../../hin/patchers",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+ ],
+		"autosave" : 0
 	}
 
 }

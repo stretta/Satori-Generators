@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 11,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 214.0, 134.0, 907.0, 674.0 ],
+		"rect" : [ 214.0, 134.0, 585.0, 674.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -217,7 +217,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 271.0, 530.811333298683167, 43.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 3.75, 40.39999794960022, 43.0, 15.0 ],
+					"presentation_rect" : [ 4.75, 44.39999794960022, 43.333333343267441, 15.0 ],
 					"prototypename" : "amount",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
@@ -261,7 +261,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 163.75, 87.0, 113.0, 20.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 3.75, 20.39999794960022, 131.0, 18.0 ],
+					"presentation_rect" : [ 4.75, 22.39999794960022, 131.0, 18.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "Trigger", "Gate", "Decay" ],
@@ -288,7 +288,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 604.600005507469177, 240.0, 15.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 3.75, 3.599999487400055, 15.0, 15.0 ],
+					"presentation_rect" : [ 4.75, 6.599999, 11.0, 11.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "off", "on" ],
@@ -340,7 +340,7 @@
 					"numoutlets" : 0,
 					"patching_rect" : [ 44.5, 72.333332300186157, 38.0, 18.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 20.0, 4.0, 38.0, 18.0 ],
+					"presentation_rect" : [ 18.0, 4.0, 38.0, 18.0 ],
 					"text" : "DECAY"
 				}
 
@@ -357,7 +357,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 6,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -566,7 +566,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 519.100005507469177, 456.800011217594147, 43.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 74.0, 40.39999794960022, 60.75, 15.0 ],
+					"presentation_rect" : [ 74.0, 44.39999794960022, 60.75, 15.0 ],
 					"prototypename" : "time",
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
@@ -894,7 +894,6 @@
 				"name" : "Default M4L-1",
 				"default" : 				{
 					"fontname" : [ "Arial" ],
-					"fontface" : [ 1 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -904,6 +903,7 @@
 						"proportion" : 0.39
 					}
 ,
+					"fontface" : [ 1 ],
 					"fontsize" : [ 11.0 ]
 				}
 ,

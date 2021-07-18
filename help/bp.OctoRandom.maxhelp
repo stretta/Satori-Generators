@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 121.0, 79.0, 932.0, 742.0 ],
+		"rect" : [ 59.0, 104.0, 848.0, 650.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,48 +40,17 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 552.0, 47.0, 140.0, 20.0 ],
-					"text" : "Quantize MIDI notes"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"fontsize" : 18.0,
-					"id" : "obj-10",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 552.0, 18.0, 184.0, 27.0 ],
-					"text" : "bp.MIDIPitchQuantize"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-6",
+					"bubble" : 1,
+					"bubblepoint" : 0.33,
+					"bubbleside" : 2,
+					"bubbletextmargin" : 6,
+					"id" : "obj-23",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 519.0, 100.999995112419128, 150.0, 33.0 ],
-					"text" : "the scale message is reflected in the UI"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-3",
-					"linecount" : 4,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 141.5, 34.499995112419128, 153.0, 60.0 ],
-					"text" : "Rotate and transpose messages are summed with the displayed bias value UI."
+					"patching_rect" : [ 296.0, 119.0, 76.0, 54.0 ],
+					"text" : "attenuators (0-100%)"
 				}
 
 			}
@@ -92,371 +61,181 @@
 					"clickthrough" : 0,
 					"enablehscroll" : 0,
 					"enablevscroll" : 0,
-					"id" : "obj-2",
+					"id" : "obj-9",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "bp.MIDIInput.maxpat",
+					"name" : "bp.GlobalTransport.maxpat",
 					"numinlets" : 0,
-					"numoutlets" : 1,
+					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 137.0, 192.000004887580872, 140.0, 60.0 ],
+					"patching_rect" : [ 451.0, 153.0, 140.0, 60.0 ],
+					"varname" : "bp.GlobalTransport",
 					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-27",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 352.0, 61.999995112419128, 71.0, 22.0 ],
-					"text" : "transpose 0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-26",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 304.0, 29.999995112419128, 82.0, 22.0 ],
-					"text" : "transpose -12"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-25",
-					"linecount" : 4,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 329.0, 353.0, 181.0, 60.0 ],
-					"text" : "Rotational transposition bias value. If a diatonic scale is specified, the result is diatonic transpositoin.  "
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-24",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 380.0, 123.0, 33.0 ],
-					"text" : "Chromatic transpose bias (post quantize)"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-23",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 415.0, 150.0, 20.0 ],
-					"text" : "Hold will sustain all notes"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-22",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 329.0, 417.0, 150.0, 20.0 ],
-					"text" : "Panic sends all notes off"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-20",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 182.0, 690.0, 59.0, 22.0 ],
-					"text" : "dac~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"autosave" : 1,
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"id" : "obj-19",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 8,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "signal", "", "list", "int", "", "", "" ],
-					"patching_rect" : [ 182.0, 569.0, 300.0, 100.0 ],
-					"save" : [ "#N", "vst~", "loaduniqueid", 0, "C74_VST:/FM8", ";" ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_invisible" : 1,
-							"parameter_longname" : "vst~",
-							"parameter_shortname" : "vst~",
-							"parameter_type" : 3
-						}
-
-					}
-,
-					"saved_object_attributes" : 					{
-						"parameter_enable" : 1,
-						"parameter_mappable" : 0
-					}
-,
-					"snapshot" : 					{
-						"filetype" : "C74Snapshot",
-						"version" : 2,
-						"minorversion" : 0,
-						"name" : "snapshotlist",
-						"origin" : "vst~",
-						"type" : "list",
-						"subtype" : "Undefined",
-						"embed" : 1,
-						"snapshot" : 						{
-							"pluginname" : "FM8.vstinfo",
-							"plugindisplayname" : "FM8",
-							"pluginsavedname" : "C74_VST:/FM8",
-							"pluginsaveduniqueid" : 0,
-							"version" : 1,
-							"isbank" : 0,
-							"isbase64" : 1,
-							"sliderorder" : [  ],
-							"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-							"blob" : "1872.CMlaKA....fQPMDZ....A3TZlgC...P......5TY2M0a04FY.............................b.ETb........P.....nMWZtE..........23XdO.7vGmzgf58HR+E8YYI.........DMURNYG...P.....HA.........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....A....D....................PChUVgA....f.bP.......A....D....................v.....v..L..C......................D....P..........PzTI4TY....BY........P.....nMWZtE..........vDN92..E.aDphBfCHWMHQ1F.........DMURNUF...P.....z..........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....B....D......H....D....fB....w.fK.HC.t..L.3B.w..L.DC.v.P.....C..........QSkjSrA...fZ.........A....f1bo4V...........xNW2s.srkR8NFxLp5lCuOdA........PzTI4Da....A....fA.........DMURNE....P.....A....D....f.....A..........B....NAPY.bG.SAva.TG.tA.Y.b....fa.7F.zA.H.LG.kA.c.................................................D....P.....A....L....fQ.zD.3............b....vA....bA.P.LF.uA.a.7F.xAP.....v.PD....bA.P.PF.kAfc.jF.iAPY.PG.4A.b.TF.lA.a.DF.mAvb.D....PL.r.....W..D.yAva.TG.tA.Y.PG.4A.b.TF.A.....C.G....vE..A.c.TF.sA.b.7F.A.....C.F....vE..Afc.TF.xA.a.T....PL.3B.2.fK.fC.F....vE..Afc.TF.xAPa.T....PL.3B.2.fK.fC.G....vE..Afc.jF.yAPZ.HF.A.....C.A.........f.....DMURNkG....Z.........D.....ZyklaA.........fQqunvZl9gDQXOxfhc5ZSn3..........QSkjS4A...D.....F.........PzTI4T.....A....D....P.....A.........P..........D.....QSkjSzA...D2.........A....f1bo4V..........Lr3MH3brvoS4tVP.NbE9RZPC........PzTI4Dc....A....fx.........DMURNMG...P.....X..........QSkjSA....D....P.....A....DPuO...uK...HPuO..X..P.fTv.nMWZtAzA.A.DePxZF.eFHoDltF5UME7C7fAPT.B.CPzTI4DPi.9AC.D..sA.sABBAj1CfP.H..zHfOvTPjj.iICqZWrQmBlcBaaDOxYNfdBv2.zKfewY.MR.w6.HbAB..T.HCDvXL.BAf..BzMmbvUDNMYzyfr.A7NB..b.HGX.YkYVX0wFcfigBfnB.+.t.CLPP...ff7..fBxAfu....OHW.zG.C..f.xC.C.XWT.P...RBA.3D..PO.z.fewGfA.H6ANAC.D..OA3C..PS.N..LPyLyrOfvv.+nYlY.zE.O.3.bAHJ.9Aa.zD.A.3Gb.P..xDfsJP..xBfM.P..zB.A.HiCF..+.PG.z.fO...+.PG.z..C.PK.7..A.vK.7A.A.3Cr.P..zCfO..f7PveB7A.fb3NLG3e..3.7N3N..PeAz..CPPOG79.s.PC..nfLHPG.D..PKHK.fkfL.3C..v+.zA.M.v..zLfe7Rf...A.L.fr.f..f..C.fN.dG..N.r.f+f2wKfGB..PA3gnB3v.PvC.tB..1T.V.3..fPFB9EC.tG..d+YARVh.TPREf9CAzAfWECCUMPmEf9CA5Y.gG3.DH3Nw.3A..HzQ..+XlYlA1.fOFCf...vQB6A3uP.QGH..tOLHpvfCfU.B.niAH.fiCCfLFAvIL..XHX5ZBV.N.PVAdPL.xXfCPSfCO...EH..947Cv+feA..PPPQn.BxL....jL....7HTJfLP.vKjXXCP.fDffhCxAfHfPUBnAfl.H2.ZBffDnIrxEfl..F.N.IrBAfNAH..ZB.hDnF.5DfK7SfuD..DAnTMvZtElXAECv.D.f..B..jAnQLvXz4VZLsX.QbBHT.B.rBhRbD.nBI9DOvTh.+QSa.7Bf2O.f2K.A.B..Bv.ykVcmIDI.f9HwAL.AcN.Y.BCifIXCLhzfAvAmAGcikEUMUDPLrPChUVgA.........P......D.........."
-						}
-,
-						"snapshotlist" : 						{
-							"current_snapshot" : 0,
-							"entries" : [ 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "FM8",
-									"origin" : "FM8.vstinfo",
-									"type" : "VST",
-									"subtype" : "Instrument",
-									"embed" : 1,
-									"snapshot" : 									{
-										"pluginname" : "FM8.vstinfo",
-										"plugindisplayname" : "FM8",
-										"pluginsavedname" : "C74_VST:/FM8",
-										"pluginsaveduniqueid" : 0,
-										"version" : 1,
-										"isbank" : 0,
-										"isbase64" : 1,
-										"sliderorder" : [  ],
-										"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-										"blob" : "1872.CMlaKA....fQPMDZ....A3TZlgC...P......5TY2M0a04FY.............................b.ETb........P.....nMWZtE..........23XdO.7vGmzgf58HR+E8YYI.........DMURNYG...P.....HA.........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....A....D....................PChUVgA....f.bP.......A....D....................v.....v..L..C......................D....P..........PzTI4TY....BY........P.....nMWZtE..........vDN92..E.aDphBfCHWMHQ1F.........DMURNUF...P.....z..........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....B....D......H....D....fB....w.fK.HC.t..L.3B.w..L.DC.v.P.....C..........QSkjSrA...fZ.........A....f1bo4V...........xNW2s.srkR8NFxLp5lCuOdA........PzTI4Da....A....fA.........DMURNE....P.....A....D....f.....A..........B....NAPY.bG.SAva.TG.tA.Y.b....fa.7F.zA.H.LG.kA.c.................................................D....P.....A....L....fQ.zD.3............b....vA....bA.P.LF.uA.a.7F.xAP.....v.PD....bA.P.PF.kAfc.jF.iAPY.PG.4A.b.TF.lA.a.DF.mAvb.D....PL.r.....W..D.yAva.TG.tA.Y.PG.4A.b.TF.A.....C.G....vE..A.c.TF.sA.b.7F.A.....C.F....vE..Afc.TF.xA.a.T....PL.3B.2.fK.fC.F....vE..Afc.TF.xAPa.T....PL.3B.2.fK.fC.G....vE..Afc.jF.yAPZ.HF.A.....C.A.........f.....DMURNkG....Z.........D.....ZyklaA.........fQqunvZl9gDQXOxfhc5ZSn3..........QSkjS4A...D.....F.........PzTI4T.....A....D....P.....A.........P..........D.....QSkjSzA...D2.........A....f1bo4V..........Lr3MH3brvoS4tVP.NbE9RZPC........PzTI4Dc....A....fx.........DMURNMG...P.....X..........QSkjSA....D....P.....A....DPuO...uK...HPuO..X..P.fTv.nMWZtAzA.A.DePxZF.eFHoDltF5UME7C7fAPT.B.CPzTI4DPi.9AC.D..sA.sABBAj1CfP.H..zHfOvTPjj.iICqZWrQmBlcBaaDOxYNfdBv2.zKfewY.MR.w6.HbAB..T.HCDvXL.BAf..BzMmbvUDNMYzyfr.A7NB..b.HGX.YkYVX0wFcfigBfnB.+.t.CLPP...ff7..fBxAfu....OHW.zG.C..f.xC.C.XWT.P...RBA.3D..PO.z.fewGfA.H6ANAC.D..OA3C..PS.N..LPyLyrOfvv.+nYlY.zE.O.3.bAHJ.9Aa.zD.A.3Gb.P..xDfsJP..xBfM.P..zB.A.HiCF..+.PG.z.fO...+.PG.z..C.PK.7..A.vK.7A.A.3Cr.P..zCfO..f7PveB7A.fb3NLG3e..3.7N3N..PeAz..CPPOG79.s.PC..nfLHPG.D..PKHK.fkfL.3C..v+.zA.M.v..zLfe7Rf...A.L.fr.f..f..C.fN.dG..N.r.f+f2wKfGB..PA3gnB3v.PvC.tB..1T.V.3..fPFB9EC.tG..d+YARVh.TPREf9CAzAfWECCUMPmEf9CA5Y.gG3.DH3Nw.3A..HzQ..+XlYlA1.fOFCf...vQB6A3uP.QGH..tOLHpvfCfU.B.niAH.fiCCfLFAvIL..XHX5ZBV.N.PVAdPL.xXfCPSfCO...EH..947Cv+feA..PPPQn.BxL....jL....7HTJfLP.vKjXXCP.fDffhCxAfHfPUBnAfl.H2.ZBffDnIrxEfl..F.N.IrBAfNAH..ZB.hDnF.5DfK7SfuD..DAnTMvZtElXAECv.D.f..B..jAnQLvXz4VZLsX.QbBHT.B.rBhRbD.nBI9DOvTh.+QSa.7Bf2O.f2K.A.B..Bv.ykVcmIDI.f9HwAL.AcN.Y.BCifIXCLhzfAvAmAGcikEUMUDPLrPChUVgA.........P......D.........."
-									}
-,
-									"fileref" : 									{
-										"name" : "FM8",
-										"filename" : "FM8.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "03b03669f459bfcaf4a85e18941ed374"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "FM8",
-									"origin" : "FM8.vstinfo",
-									"type" : "VST",
-									"subtype" : "Instrument",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "FM8",
-										"filename" : "FM8.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "03b03669f459bfcaf4a85e18941ed374"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "FM8",
-									"origin" : "FM8.vstinfo",
-									"type" : "VST",
-									"subtype" : "Instrument",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "FM8",
-										"filename" : "FM8_20190704.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "cd0de4825fb0c541b820768f1765b3ce"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "FM8",
-									"origin" : "FM8.vstinfo",
-									"type" : "VST",
-									"subtype" : "Instrument",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "FM8",
-										"filename" : "FM8_20200211.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "ee5adffd3681ffa81c01fc7b9c90b7ed"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "Massive X",
-									"origin" : "FM8.vstinfo",
-									"type" : "VST",
-									"subtype" : "Instrument",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "Massive X",
-										"filename" : "Massive X.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "b6a2890262cf98ea851f0bbf98e254c8"
-									}
-
-								}
- ]
-						}
-
-					}
-,
-					"text" : "vst~ C74_VST:/FM8",
-					"varname" : "vst~",
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-18",
-					"maxclass" : "newobj",
+					"linecount" : 2,
+					"maxclass" : "comment",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 182.0, 522.0, 107.0, 22.0 ],
-					"text" : "prepend midievent"
+					"numoutlets" : 0,
+					"patching_rect" : [ 25.0, 191.0, 150.0, 33.0 ],
+					"text" : "time interval is set in ticks\n120 ticks = 1/16th note"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-17",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 182.0, 477.0, 61.0, 22.0 ],
-					"text" : "zl group 3"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-13",
-					"maxclass" : "number",
+					"format" : 6,
+					"id" : "obj-15",
+					"maxclass" : "flonum",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 422.5, 111.999995112419128, 50.0, 22.0 ]
+					"patching_rect" : [ 603.0, 533.0, 50.0, 22.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-11",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 422.5, 160.999995112419128, 56.0, 22.0 ],
-					"text" : "rotate $1"
+					"format" : 6,
+					"id" : "obj-16",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 549.285714285714334, 533.0, 50.0, 22.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-9",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 527.0, 155.999995112419128, 157.0, 22.0 ],
-					"text" : "scale 1 0 1 1 0 1 0 1 1 0 1 0"
+					"format" : 6,
+					"id" : "obj-17",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 495.571428571428612, 533.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-18",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 441.85714285714289, 533.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-13",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 388.142857142857167, 533.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-14",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 334.428571428571445, 533.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-12",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 280.714285714285722, 533.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"format" : 6,
+					"id" : "obj-10",
+					"maxclass" : "flonum",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 227.0, 533.0, 50.0, 22.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-8",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 527.0, 210.999995112419128, 157.0, 22.0 ],
-					"text" : "scale 1 0 1 0 1 1 0 1 0 1 0 1"
+					"maxclass" : "newobj",
+					"numinlets" : 9,
+					"numoutlets" : 9,
+					"outlettype" : [ "", "", "", "", "", "", "", "", "" ],
+					"patching_rect" : [ 227.0, 490.0, 448.714285714285666, 22.0 ],
+					"text" : "route 1 2 3 4 5 6 7 8"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-5",
-					"maxclass" : "newobj",
+					"linecount" : 2,
+					"maxclass" : "comment",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 715.583329677581787, 231.000004887580872, 84.0, 22.0 ],
-					"text" : "prepend scale"
+					"numoutlets" : 0,
+					"patching_rect" : [ 25.0, 140.0, 142.0, 33.0 ],
+					"presentation_linecount" : 2,
+					"text" : "There are eight independent generators"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-563",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "bp.kspitch.maxpat",
+					"id" : "obj-7",
+					"linecount" : 2,
+					"maxclass" : "comment",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 715.583329677581787, 145.0, 89.0, 62.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 4.493270999999993, 29.999995112419128, 89.0, 61.0 ],
-					"varname" : "bp.kspitch",
-					"viewvisibility" : 1
+					"numoutlets" : 0,
+					"patching_rect" : [ 25.0, 72.0, 188.0, 33.0 ],
+					"text" : "Produce random bipolar values at metric intevals"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 18.0,
+					"id" : "obj-6",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 25.0, 43.0, 133.0, 27.0 ],
+					"text" : "bp.Octorandom"
 				}
 
 			}
@@ -470,13 +249,12 @@
 					"id" : "obj-1",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "bp.MIDIPitchQuantize.maxpat",
-					"numinlets" : 2,
+					"name" : "bp.OctoRandom.maxpat",
+					"numinlets" : 0,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 182.0, 304.0, 140.0, 142.0 ],
-					"varname" : "bp.MIDIQuantize",
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 227.0, 160.0, 140.0, 302.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -484,150 +262,232 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
+					"destination" : [ "obj-8", 0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"source" : [ "obj-11", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"source" : [ "obj-17", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
-					"source" : [ "obj-18", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-20", 1 ],
-					"source" : [ "obj-19", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-20", 0 ],
-					"source" : [ "obj-19", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"source" : [ "obj-26", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"source" : [ "obj-27", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-563", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
+					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-8", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"source" : [ "obj-9", 0 ]
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-8", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-13", 0 ],
+					"source" : [ "obj-8", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-14", 0 ],
+					"source" : [ "obj-8", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"source" : [ "obj-8", 7 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-16", 0 ],
+					"source" : [ "obj-8", 6 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"source" : [ "obj-8", 5 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-8", 4 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
-			"obj-19" : [ "vst~", "vst~", 0 ],
-			"obj-1::obj-14" : [ "live.text", "live.text", 0 ],
-			"obj-1::obj-15" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-1::obj-21" : [ "live.text[1]", "live.text[1]", 0 ],
-			"obj-1::obj-32" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-1::obj-50" : [ "number", "number", 0 ],
-			"obj-1::obj-563::obj-3" : [ "live.tab[1]", "live.tab", 0 ],
-			"obj-1::obj-563::obj-556::obj-28" : [ "1076_pitch-bin", "1211_pitch-bin", 0 ],
-			"obj-2::obj-14" : [ "refresh[2]", "refresh", 0 ],
-			"obj-2::obj-2" : [ "MIDIPort", "MIDIPort", 0 ],
-			"obj-563::obj-3" : [ "live.tab", "live.tab", 0 ],
-			"obj-563::obj-556::obj-28" : [ "1097_pitch-bin", "1176_pitch-bin", 0 ],
+			"obj-1::obj-103::obj-10" : [ "live.text[3]", "live.text", 0 ],
+			"obj-1::obj-103::obj-21" : [ "live.numbox[2]", "Amount", 0 ],
+			"obj-1::obj-103::obj-3" : [ "number[1]", "number", 0 ],
+			"obj-1::obj-103::obj-77" : [ "live.button[2]", "live.button", 0 ],
+			"obj-1::obj-103::obj-9" : [ "live.text[2]", "live.text", 0 ],
+			"obj-1::obj-106::obj-10" : [ "live.text[7]", "live.text", 0 ],
+			"obj-1::obj-106::obj-21" : [ "live.numbox[4]", "Amount", 0 ],
+			"obj-1::obj-106::obj-3" : [ "number[3]", "number", 0 ],
+			"obj-1::obj-106::obj-77" : [ "live.button[4]", "live.button", 0 ],
+			"obj-1::obj-106::obj-9" : [ "live.text[6]", "live.text", 0 ],
+			"obj-1::obj-109::obj-10" : [ "live.text[5]", "live.text", 0 ],
+			"obj-1::obj-109::obj-21" : [ "live.numbox[3]", "Amount", 0 ],
+			"obj-1::obj-109::obj-3" : [ "number[2]", "number", 0 ],
+			"obj-1::obj-109::obj-77" : [ "live.button[3]", "live.button", 0 ],
+			"obj-1::obj-109::obj-9" : [ "live.text[4]", "live.text", 0 ],
+			"obj-1::obj-112::obj-10" : [ "live.text[14]", "live.text", 0 ],
+			"obj-1::obj-112::obj-21" : [ "live.numbox[8]", "Amount", 0 ],
+			"obj-1::obj-112::obj-3" : [ "number[7]", "number", 0 ],
+			"obj-1::obj-112::obj-77" : [ "live.button[8]", "live.button", 0 ],
+			"obj-1::obj-112::obj-9" : [ "live.text[15]", "live.text", 0 ],
+			"obj-1::obj-115::obj-10" : [ "live.text[12]", "live.text", 0 ],
+			"obj-1::obj-115::obj-21" : [ "live.numbox[7]", "Amount", 0 ],
+			"obj-1::obj-115::obj-3" : [ "number[6]", "number", 0 ],
+			"obj-1::obj-115::obj-77" : [ "live.button[7]", "live.button", 0 ],
+			"obj-1::obj-115::obj-9" : [ "live.text[13]", "live.text", 0 ],
+			"obj-1::obj-118::obj-10" : [ "live.text[10]", "live.text", 0 ],
+			"obj-1::obj-118::obj-21" : [ "live.numbox[6]", "Amount", 0 ],
+			"obj-1::obj-118::obj-3" : [ "number[5]", "number", 0 ],
+			"obj-1::obj-118::obj-77" : [ "live.button[6]", "live.button", 0 ],
+			"obj-1::obj-118::obj-9" : [ "live.text[11]", "live.text", 0 ],
+			"obj-1::obj-121::obj-10" : [ "live.text[9]", "live.text", 0 ],
+			"obj-1::obj-121::obj-21" : [ "live.numbox[5]", "Amount", 0 ],
+			"obj-1::obj-121::obj-3" : [ "number[4]", "number", 0 ],
+			"obj-1::obj-121::obj-77" : [ "live.button[5]", "live.button", 0 ],
+			"obj-1::obj-121::obj-9" : [ "live.text[8]", "live.text", 0 ],
+			"obj-1::obj-80::obj-10" : [ "live.text[1]", "live.text", 0 ],
+			"obj-1::obj-80::obj-21" : [ "live.numbox[1]", "Amount", 0 ],
+			"obj-1::obj-80::obj-3" : [ "number", "number", 0 ],
+			"obj-1::obj-80::obj-77" : [ "live.button[1]", "live.button", 0 ],
+			"obj-1::obj-80::obj-9" : [ "live.text", "live.text", 0 ],
+			"obj-9::obj-10" : [ "live.text[32]", "live.text", 0 ],
+			"obj-9::obj-30" : [ "sync_source[1]", "sync_source", 0 ],
+			"obj-9::obj-8" : [ "live.text[31]", "live.text", 0 ],
+			"obj-9::obj-9" : [ "live.numbox[44]", "live.numbox", 0 ],
 			"parameterbanks" : 			{
 
 			}
 ,
 			"parameter_overrides" : 			{
-				"obj-1::obj-14" : 				{
-					"parameter_longname" : "live.text"
+				"obj-1::obj-103::obj-10" : 				{
+					"parameter_longname" : "live.text[3]"
 				}
 ,
-				"obj-1::obj-15" : 				{
-					"parameter_longname" : "live.numbox"
+				"obj-1::obj-103::obj-21" : 				{
+					"parameter_longname" : "live.numbox[2]"
 				}
 ,
-				"obj-1::obj-21" : 				{
-					"parameter_longname" : "live.text[1]"
+				"obj-1::obj-103::obj-77" : 				{
+					"parameter_longname" : "live.button[2]"
 				}
 ,
-				"obj-1::obj-32" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "live.text[2]",
-					"parameter_modmode" : 0,
-					"parameter_shortname" : "live.text[2]",
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
+				"obj-1::obj-103::obj-9" : 				{
+					"parameter_longname" : "live.text[2]"
 				}
 ,
-				"obj-1::obj-563::obj-3" : 				{
-					"parameter_longname" : "live.tab[1]"
+				"obj-1::obj-106::obj-10" : 				{
+					"parameter_longname" : "live.text[7]"
 				}
 ,
-				"obj-2::obj-2" : 				{
-					"parameter_invisible" : 0,
-					"parameter_modmode" : 0,
-					"parameter_unitstyle" : 10
+				"obj-1::obj-106::obj-21" : 				{
+					"parameter_longname" : "live.numbox[4]"
+				}
+,
+				"obj-1::obj-106::obj-77" : 				{
+					"parameter_longname" : "live.button[4]"
+				}
+,
+				"obj-1::obj-106::obj-9" : 				{
+					"parameter_longname" : "live.text[6]"
+				}
+,
+				"obj-1::obj-109::obj-10" : 				{
+					"parameter_longname" : "live.text[5]"
+				}
+,
+				"obj-1::obj-109::obj-21" : 				{
+					"parameter_longname" : "live.numbox[3]"
+				}
+,
+				"obj-1::obj-109::obj-77" : 				{
+					"parameter_longname" : "live.button[3]"
+				}
+,
+				"obj-1::obj-109::obj-9" : 				{
+					"parameter_longname" : "live.text[4]"
+				}
+,
+				"obj-1::obj-112::obj-10" : 				{
+					"parameter_longname" : "live.text[14]"
+				}
+,
+				"obj-1::obj-112::obj-21" : 				{
+					"parameter_longname" : "live.numbox[8]"
+				}
+,
+				"obj-1::obj-112::obj-77" : 				{
+					"parameter_longname" : "live.button[8]"
+				}
+,
+				"obj-1::obj-112::obj-9" : 				{
+					"parameter_longname" : "live.text[15]"
+				}
+,
+				"obj-1::obj-115::obj-10" : 				{
+					"parameter_longname" : "live.text[12]"
+				}
+,
+				"obj-1::obj-115::obj-21" : 				{
+					"parameter_longname" : "live.numbox[7]"
+				}
+,
+				"obj-1::obj-115::obj-77" : 				{
+					"parameter_longname" : "live.button[7]"
+				}
+,
+				"obj-1::obj-115::obj-9" : 				{
+					"parameter_longname" : "live.text[13]"
+				}
+,
+				"obj-1::obj-118::obj-10" : 				{
+					"parameter_longname" : "live.text[10]"
+				}
+,
+				"obj-1::obj-118::obj-21" : 				{
+					"parameter_longname" : "live.numbox[6]"
+				}
+,
+				"obj-1::obj-118::obj-77" : 				{
+					"parameter_longname" : "live.button[6]"
+				}
+,
+				"obj-1::obj-118::obj-9" : 				{
+					"parameter_longname" : "live.text[11]"
+				}
+,
+				"obj-1::obj-121::obj-10" : 				{
+					"parameter_longname" : "live.text[9]"
+				}
+,
+				"obj-1::obj-121::obj-21" : 				{
+					"parameter_longname" : "live.numbox[5]"
+				}
+,
+				"obj-1::obj-121::obj-77" : 				{
+					"parameter_longname" : "live.button[5]"
+				}
+,
+				"obj-1::obj-121::obj-9" : 				{
+					"parameter_longname" : "live.text[8]"
+				}
+,
+				"obj-1::obj-80::obj-77" : 				{
+					"parameter_longname" : "live.button[1]"
 				}
 
 			}
@@ -636,84 +496,28 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "bp.MIDIPitchQuantize.maxpat",
+				"name" : "bp.OctoRandom.maxhelp.maxsnap",
+				"bootpath" : "~/Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../../Snapshots",
+				"type" : "mx@s",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.OctoRandom.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Satori Generators/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bp.listnearest.maxpat",
+				"name" : "bp.SHvoice.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Satori Generators/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bp.kspitch.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
-				"patcherrelativepath" : "../../hin/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bp.bintoks.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
-				"patcherrelativepath" : "../../hin/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bp.kstobin.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
-				"patcherrelativepath" : "../../hin/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bp.bintopc.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
-				"patcherrelativepath" : "../../hin/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bp.pctobin.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
-				"patcherrelativepath" : "../../hin/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "FM8.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "FM8_20190704.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "FM8_20200211.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Massive X.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bp.MIDIInput.maxpat",
+				"name" : "bp.GlobalTransport.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Satori Generators/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
@@ -721,6 +525,104 @@
 			}
  ],
 		"autosave" : 0,
+		"snapshot" : 		{
+			"filetype" : "C74Snapshot",
+			"version" : 2,
+			"minorversion" : 0,
+			"name" : "snapshotlist",
+			"origin" : "jpatcher",
+			"type" : "list",
+			"subtype" : "Undefined",
+			"embed" : 1,
+			"snapshot" : 			{
+				"valuedictionary" : 				{
+					"parameter_values" : 					{
+						"live.numbox[1]" : 100.0,
+						"live.numbox[2]" : 100.0,
+						"live.numbox[3]" : 100.0,
+						"live.numbox[44]" : 80.0,
+						"live.numbox[4]" : 100.0,
+						"live.numbox[5]" : 100.0,
+						"live.numbox[6]" : 100.0,
+						"live.numbox[7]" : 100.0,
+						"live.numbox[8]" : 100.0,
+						"live.text[31]" : 1.0,
+						"live.text[32]" : 0.0,
+						"blob" : 						{
+							"number" : [ 120 ],
+							"number[1]" : [ 360 ],
+							"number[2]" : [ 360 ],
+							"number[3]" : [ 360 ],
+							"number[4]" : [ 360 ],
+							"number[5]" : [ 480 ],
+							"number[6]" : [ 720 ],
+							"number[7]" : [ 960 ],
+							"sync_source[1]" : [ 0 ]
+						}
+
+					}
+
+				}
+
+			}
+,
+			"snapshotlist" : 			{
+				"current_snapshot" : 0,
+				"entries" : [ 					{
+						"filetype" : "C74Snapshot",
+						"version" : 2,
+						"minorversion" : 0,
+						"name" : "bp.OctoRandom.maxhelp",
+						"origin" : "bp.OctoRandom.maxhelp",
+						"type" : "patcher",
+						"subtype" : "Undefined",
+						"embed" : 1,
+						"snapshot" : 						{
+							"valuedictionary" : 							{
+								"parameter_values" : 								{
+									"live.numbox[1]" : 100.0,
+									"live.numbox[2]" : 100.0,
+									"live.numbox[3]" : 100.0,
+									"live.numbox[44]" : 80.0,
+									"live.numbox[4]" : 100.0,
+									"live.numbox[5]" : 100.0,
+									"live.numbox[6]" : 100.0,
+									"live.numbox[7]" : 100.0,
+									"live.numbox[8]" : 100.0,
+									"live.text[31]" : 1.0,
+									"live.text[32]" : 0.0,
+									"blob" : 									{
+										"number" : [ 120 ],
+										"number[1]" : [ 360 ],
+										"number[2]" : [ 360 ],
+										"number[3]" : [ 360 ],
+										"number[4]" : [ 360 ],
+										"number[5]" : [ 480 ],
+										"number[6]" : [ 720 ],
+										"number[7]" : [ 960 ],
+										"sync_source[1]" : [ 0 ]
+									}
+
+								}
+
+							}
+
+						}
+,
+						"fileref" : 						{
+							"name" : "bp.OctoRandom.maxhelp",
+							"filename" : "bp.OctoRandom.maxhelp.maxsnap",
+							"filepath" : "~/Documents/Max 8/Snapshots",
+							"filepos" : -1,
+							"snapshotfileid" : "330718e7402820216dfb0ad4a7a9c8d8"
+						}
+
+					}
+ ]
+			}
+
+		}
+,
 		"styles" : [ 			{
 				"name" : "AudioStatus_Menu",
 				"default" : 				{

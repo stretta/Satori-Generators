@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 121.0, 79.0, 932.0, 742.0 ],
+		"rect" : [ 59.0, 104.0, 973.0, 679.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,48 +40,123 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-7",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 552.0, 47.0, 140.0, 20.0 ],
-					"text" : "Quantize MIDI notes"
+					"id" : "obj-37",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "bang", "" ],
+					"patching_rect" : [ 137.0, 572.5, 34.0, 22.0 ],
+					"text" : "sel 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"fontsize" : 18.0,
-					"id" : "obj-10",
-					"maxclass" : "comment",
+					"format" : 4,
+					"id" : "obj-36",
+					"ignoreclick" : 1,
+					"maxclass" : "number",
 					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 552.0, 18.0, 184.0, 27.0 ],
-					"text" : "bp.MIDIPitchQuantize"
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 414.0, 522.0, 50.0, 22.0 ]
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-6",
+					"id" : "obj-35",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 137.0, 522.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-33",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 519.0, 100.999995112419128, 150.0, 33.0 ],
-					"text" : "the scale message is reflected in the UI"
+					"patching_rect" : [ 441.0, 579.0, 129.0, 33.0 ],
+					"presentation_linecount" : 4,
+					"text" : "edits in smølseq can update smøledit"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-3",
-					"linecount" : 4,
+					"id" : "obj-32",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 474.5, 522.0, 87.0, 22.0 ],
+					"text" : "prepend setlist"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-29",
+					"linecount" : 3,
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"patching_rect" : [ 35.5, 258.0, 90.0, 49.0 ],
+					"text" : "metro 8n @quantize 8n @active 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-28",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 141.5, 34.499995112419128, 153.0, 60.0 ],
-					"text" : "Rotate and transpose messages are summed with the displayed bias value UI."
+					"patching_rect" : [ 172.0, 522.0, 78.0, 20.0 ],
+					"text" : "current index"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-26",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 258.0, 522.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 771.0, 123.0, 78.0, 20.0 ],
+					"text" : "Bipolar floats"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 772.0, 332.0, 101.0, 22.0 ],
+					"text" : "prepend contents"
 				}
 
 			}
@@ -92,336 +167,123 @@
 					"clickthrough" : 0,
 					"enablehscroll" : 0,
 					"enablevscroll" : 0,
-					"id" : "obj-2",
+					"id" : "obj-21",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "bp.MIDIInput.maxpat",
-					"numinlets" : 0,
-					"numoutlets" : 1,
+					"name" : "bp.SmølSequencer.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 3,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 137.0, 192.000004887580872, 140.0, 60.0 ],
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 772.0, 377.0, 140.0, 121.0 ],
 					"viewvisibility" : 1
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-27",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 352.0, 61.999995112419128, 71.0, 22.0 ],
-					"text" : "transpose 0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-26",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 304.0, 29.999995112419128, 82.0, 22.0 ],
-					"text" : "transpose -12"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-25",
-					"linecount" : 4,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 329.0, 353.0, 181.0, 60.0 ],
-					"text" : "Rotational transposition bias value. If a diatonic scale is specified, the result is diatonic transpositoin.  "
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-24",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 380.0, 123.0, 33.0 ],
-					"text" : "Chromatic transpose bias (post quantize)"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-23",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 17.0, 415.0, 150.0, 20.0 ],
-					"text" : "Hold will sustain all notes"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-22",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 329.0, 417.0, 150.0, 20.0 ],
-					"text" : "Panic sends all notes off"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-20",
-					"maxclass" : "newobj",
-					"numinlets" : 2,
-					"numoutlets" : 0,
-					"patching_rect" : [ 182.0, 690.0, 59.0, 22.0 ],
-					"text" : "dac~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"autosave" : 1,
 					"bgmode" : 0,
 					"border" : 0,
 					"clickthrough" : 0,
-					"id" : "obj-19",
-					"maxclass" : "newobj",
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-22",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "bp.SmølEdit.maxpat",
 					"numinlets" : 2,
-					"numoutlets" : 8,
+					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "signal", "", "list", "int", "", "", "" ],
-					"patching_rect" : [ 182.0, 569.0, 300.0, 100.0 ],
-					"save" : [ "#N", "vst~", "loaduniqueid", 0, "C74_VST:/FM8", ";" ],
-					"saved_attribute_attributes" : 					{
-						"valueof" : 						{
-							"parameter_invisible" : 1,
-							"parameter_longname" : "vst~",
-							"parameter_shortname" : "vst~",
-							"parameter_type" : 3
-						}
-
-					}
-,
-					"saved_object_attributes" : 					{
-						"parameter_enable" : 1,
-						"parameter_mappable" : 0
-					}
-,
-					"snapshot" : 					{
-						"filetype" : "C74Snapshot",
-						"version" : 2,
-						"minorversion" : 0,
-						"name" : "snapshotlist",
-						"origin" : "vst~",
-						"type" : "list",
-						"subtype" : "Undefined",
-						"embed" : 1,
-						"snapshot" : 						{
-							"pluginname" : "FM8.vstinfo",
-							"plugindisplayname" : "FM8",
-							"pluginsavedname" : "C74_VST:/FM8",
-							"pluginsaveduniqueid" : 0,
-							"version" : 1,
-							"isbank" : 0,
-							"isbase64" : 1,
-							"sliderorder" : [  ],
-							"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-							"blob" : "1872.CMlaKA....fQPMDZ....A3TZlgC...P......5TY2M0a04FY.............................b.ETb........P.....nMWZtE..........23XdO.7vGmzgf58HR+E8YYI.........DMURNYG...P.....HA.........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....A....D....................PChUVgA....f.bP.......A....D....................v.....v..L..C......................D....P..........PzTI4TY....BY........P.....nMWZtE..........vDN92..E.aDphBfCHWMHQ1F.........DMURNUF...P.....z..........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....B....D......H....D....fB....w.fK.HC.t..L.3B.w..L.DC.v.P.....C..........QSkjSrA...fZ.........A....f1bo4V...........xNW2s.srkR8NFxLp5lCuOdA........PzTI4Da....A....fA.........DMURNE....P.....A....D....f.....A..........B....NAPY.bG.SAva.TG.tA.Y.b....fa.7F.zA.H.LG.kA.c.................................................D....P.....A....L....fQ.zD.3............b....vA....bA.P.LF.uA.a.7F.xAP.....v.PD....bA.P.PF.kAfc.jF.iAPY.PG.4A.b.TF.lA.a.DF.mAvb.D....PL.r.....W..D.yAva.TG.tA.Y.PG.4A.b.TF.A.....C.G....vE..A.c.TF.sA.b.7F.A.....C.F....vE..Afc.TF.xA.a.T....PL.3B.2.fK.fC.F....vE..Afc.TF.xAPa.T....PL.3B.2.fK.fC.G....vE..Afc.jF.yAPZ.HF.A.....C.A.........f.....DMURNkG....Z.........D.....ZyklaA.........fQqunvZl9gDQXOxfhc5ZSn3..........QSkjS4A...D.....F.........PzTI4T.....A....D....P.....A.........P..........D.....QSkjSzA...D2.........A....f1bo4V..........Lr3MH3brvoS4tVP.NbE9RZPC........PzTI4Dc....A....fx.........DMURNMG...P.....X..........QSkjSA....D....P.....A....DPuO...uK...HPuO..X..P.fTv.nMWZtAzA.A.DePxZF.eFHoDltF5UME7C7fAPT.B.CPzTI4DPi.9AC.D..sA.sABBAj1CfP.H..zHfOvTPjj.iICqZWrQmBlcBaaDOxYNfdBv2.zKfewY.MR.w6.HbAB..T.HCDvXL.BAf..BzMmbvUDNMYzyfr.A7NB..b.HGX.YkYVX0wFcfigBfnB.+.t.CLPP...ff7..fBxAfu....OHW.zG.C..f.xC.C.XWT.P...RBA.3D..PO.z.fewGfA.H6ANAC.D..OA3C..PS.N..LPyLyrOfvv.+nYlY.zE.O.3.bAHJ.9Aa.zD.A.3Gb.P..xDfsJP..xBfM.P..zB.A.HiCF..+.PG.z.fO...+.PG.z..C.PK.7..A.vK.7A.A.3Cr.P..zCfO..f7PveB7A.fb3NLG3e..3.7N3N..PeAz..CPPOG79.s.PC..nfLHPG.D..PKHK.fkfL.3C..v+.zA.M.v..zLfe7Rf...A.L.fr.f..f..C.fN.dG..N.r.f+f2wKfGB..PA3gnB3v.PvC.tB..1T.V.3..fPFB9EC.tG..d+YARVh.TPREf9CAzAfWECCUMPmEf9CA5Y.gG3.DH3Nw.3A..HzQ..+XlYlA1.fOFCf...vQB6A3uP.QGH..tOLHpvfCfU.B.niAH.fiCCfLFAvIL..XHX5ZBV.N.PVAdPL.xXfCPSfCO...EH..947Cv+feA..PPPQn.BxL....jL....7HTJfLP.vKjXXCP.fDffhCxAfHfPUBnAfl.H2.ZBffDnIrxEfl..F.N.IrBAfNAH..ZB.hDnF.5DfK7SfuD..DAnTMvZtElXAECv.D.f..B..jAnQLvXz4VZLsX.QbBHT.B.rBhRbD.nBI9DOvTh.+QSa.7Bf2O.f2K.A.B..Bv.ykVcmIDI.f9HwAL.AcN.Y.BCifIXCLhzfAvAmAGcikEUMUDPLrPChUVgA.........P......D.........."
-						}
-,
-						"snapshotlist" : 						{
-							"current_snapshot" : 0,
-							"entries" : [ 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "FM8",
-									"origin" : "FM8.vstinfo",
-									"type" : "VST",
-									"subtype" : "Instrument",
-									"embed" : 1,
-									"snapshot" : 									{
-										"pluginname" : "FM8.vstinfo",
-										"plugindisplayname" : "FM8",
-										"pluginsavedname" : "C74_VST:/FM8",
-										"pluginsaveduniqueid" : 0,
-										"version" : 1,
-										"isbank" : 0,
-										"isbase64" : 1,
-										"sliderorder" : [  ],
-										"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-										"blob" : "1872.CMlaKA....fQPMDZ....A3TZlgC...P......5TY2M0a04FY.............................b.ETb........P.....nMWZtE..........23XdO.7vGmzgf58HR+E8YYI.........DMURNYG...P.....HA.........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....A....D....................PChUVgA....f.bP.......A....D....................v.....v..L..C......................D....P..........PzTI4TY....BY........P.....nMWZtE..........vDN92..E.aDphBfCHWMHQ1F.........DMURNUF...P.....z..........QSkjSpA...D.....F.........PzTI4T.....A....D....P.....B....D......H....D....fB....w.fK.HC.t..L.3B.w..L.DC.v.P.....C..........QSkjSrA...fZ.........A....f1bo4V...........xNW2s.srkR8NFxLp5lCuOdA........PzTI4Da....A....fA.........DMURNE....P.....A....D....f.....A..........B....NAPY.bG.SAva.TG.tA.Y.b....fa.7F.zA.H.LG.kA.c.................................................D....P.....A....L....fQ.zD.3............b....vA....bA.P.LF.uA.a.7F.xAP.....v.PD....bA.P.PF.kAfc.jF.iAPY.PG.4A.b.TF.lA.a.DF.mAvb.D....PL.r.....W..D.yAva.TG.tA.Y.PG.4A.b.TF.A.....C.G....vE..A.c.TF.sA.b.7F.A.....C.F....vE..Afc.TF.xA.a.T....PL.3B.2.fK.fC.F....vE..Afc.TF.xAPa.T....PL.3B.2.fK.fC.G....vE..Afc.jF.yAPZ.HF.A.....C.A.........f.....DMURNkG....Z.........D.....ZyklaA.........fQqunvZl9gDQXOxfhc5ZSn3..........QSkjS4A...D.....F.........PzTI4T.....A....D....P.....A.........P..........D.....QSkjSzA...D2.........A....f1bo4V..........Lr3MH3brvoS4tVP.NbE9RZPC........PzTI4Dc....A....fx.........DMURNMG...P.....X..........QSkjSA....D....P.....A....DPuO...uK...HPuO..X..P.fTv.nMWZtAzA.A.DePxZF.eFHoDltF5UME7C7fAPT.B.CPzTI4DPi.9AC.D..sA.sABBAj1CfP.H..zHfOvTPjj.iICqZWrQmBlcBaaDOxYNfdBv2.zKfewY.MR.w6.HbAB..T.HCDvXL.BAf..BzMmbvUDNMYzyfr.A7NB..b.HGX.YkYVX0wFcfigBfnB.+.t.CLPP...ff7..fBxAfu....OHW.zG.C..f.xC.C.XWT.P...RBA.3D..PO.z.fewGfA.H6ANAC.D..OA3C..PS.N..LPyLyrOfvv.+nYlY.zE.O.3.bAHJ.9Aa.zD.A.3Gb.P..xDfsJP..xBfM.P..zB.A.HiCF..+.PG.z.fO...+.PG.z..C.PK.7..A.vK.7A.A.3Cr.P..zCfO..f7PveB7A.fb3NLG3e..3.7N3N..PeAz..CPPOG79.s.PC..nfLHPG.D..PKHK.fkfL.3C..v+.zA.M.v..zLfe7Rf...A.L.fr.f..f..C.fN.dG..N.r.f+f2wKfGB..PA3gnB3v.PvC.tB..1T.V.3..fPFB9EC.tG..d+YARVh.TPREf9CAzAfWECCUMPmEf9CA5Y.gG3.DH3Nw.3A..HzQ..+XlYlA1.fOFCf...vQB6A3uP.QGH..tOLHpvfCfU.B.niAH.fiCCfLFAvIL..XHX5ZBV.N.PVAdPL.xXfCPSfCO...EH..947Cv+feA..PPPQn.BxL....jL....7HTJfLP.vKjXXCP.fDffhCxAfHfPUBnAfl.H2.ZBffDnIrxEfl..F.N.IrBAfNAH..ZB.hDnF.5DfK7SfuD..DAnTMvZtElXAECv.D.f..B..jAnQLvXz4VZLsX.QbBHT.B.rBhRbD.nBI9DOvTh.+QSa.7Bf2O.f2K.A.B..Bv.ykVcmIDI.f9HwAL.AcN.Y.BCifIXCLhzfAvAmAGcikEUMUDPLrPChUVgA.........P......D.........."
-									}
-,
-									"fileref" : 									{
-										"name" : "FM8",
-										"filename" : "FM8.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "03b03669f459bfcaf4a85e18941ed374"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "FM8",
-									"origin" : "FM8.vstinfo",
-									"type" : "VST",
-									"subtype" : "Instrument",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "FM8",
-										"filename" : "FM8.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "03b03669f459bfcaf4a85e18941ed374"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "FM8",
-									"origin" : "FM8.vstinfo",
-									"type" : "VST",
-									"subtype" : "Instrument",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "FM8",
-										"filename" : "FM8_20190704.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "cd0de4825fb0c541b820768f1765b3ce"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "FM8",
-									"origin" : "FM8.vstinfo",
-									"type" : "VST",
-									"subtype" : "Instrument",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "FM8",
-										"filename" : "FM8_20200211.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "ee5adffd3681ffa81c01fc7b9c90b7ed"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "Massive X",
-									"origin" : "FM8.vstinfo",
-									"type" : "VST",
-									"subtype" : "Instrument",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "Massive X",
-										"filename" : "Massive X.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "b6a2890262cf98ea851f0bbf98e254c8"
-									}
-
-								}
- ]
-						}
-
-					}
-,
-					"text" : "vst~ C74_VST:/FM8",
-					"varname" : "vst~",
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 772.0, 157.0, 140.0, 150.0 ],
 					"viewvisibility" : 1
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-18",
-					"maxclass" : "newobj",
+					"id" : "obj-14",
+					"maxclass" : "comment",
 					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 182.0, 522.0, 107.0, 22.0 ],
-					"text" : "prepend midievent"
+					"numoutlets" : 0,
+					"patching_rect" : [ 604.0, 123.0, 123.0, 20.0 ],
+					"presentation_linecount" : 2,
+					"text" : "Unipolar positive float"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-17",
+					"id" : "obj-15",
 					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 605.0, 332.0, 101.0, 22.0 ],
+					"text" : "prepend contents"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-16",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "bp.SmølSequencer.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 605.0, 377.0, 140.0, 121.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-17",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "bp.SmølEdit.maxpat",
 					"numinlets" : 2,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 182.0, 477.0, 61.0, 22.0 ],
-					"text" : "zl group 3"
+					"numoutlets" : 1,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 605.0, 157.0, 140.0, 150.0 ],
+					"viewvisibility" : 1
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-13",
-					"maxclass" : "number",
+					"maxclass" : "comment",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 422.5, 111.999995112419128, 50.0, 22.0 ]
+					"numoutlets" : 0,
+					"patching_rect" : [ 413.0, 123.0, 80.0, 20.0 ],
+					"presentation_linecount" : 2,
+					"text" : "MIDI integers"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-11",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 422.5, 160.999995112419128, 56.0, 22.0 ],
-					"text" : "rotate $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-9",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 527.0, 155.999995112419128, 157.0, 22.0 ],
-					"text" : "scale 1 0 1 1 0 1 0 1 1 0 1 0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-8",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 527.0, 210.999995112419128, 157.0, 22.0 ],
-					"text" : "scale 1 0 1 0 1 1 0 1 0 1 0 1"
+					"id" : "obj-12",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 137.0, 123.0, 53.0, 20.0 ],
+					"text" : "Patterns"
 				}
 
 			}
@@ -432,8 +294,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 715.583329677581787, 231.000004887580872, 84.0, 22.0 ],
-					"text" : "prepend scale"
+					"patching_rect" : [ 414.0, 332.0, 101.0, 22.0 ],
+					"text" : "prepend contents"
 				}
 
 			}
@@ -444,19 +306,71 @@
 					"clickthrough" : 0,
 					"enablehscroll" : 0,
 					"enablevscroll" : 0,
-					"id" : "obj-563",
+					"id" : "obj-6",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "bp.kspitch.maxpat",
+					"name" : "bp.SmølSequencer.maxpat",
 					"numinlets" : 1,
+					"numoutlets" : 3,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 414.0, 377.0, 140.0, 121.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-7",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "bp.SmølEdit.maxpat",
+					"numinlets" : 2,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 715.583329677581787, 145.0, 89.0, 62.0 ],
-					"presentation" : 1,
-					"presentation_rect" : [ 4.493270999999993, 29.999995112419128, 89.0, 61.0 ],
-					"varname" : "bp.kspitch",
+					"patching_rect" : [ 414.0, 157.0, 140.0, 150.0 ],
 					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-10",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 44.0, 74.0, 252.0, 20.0 ],
+					"text" : "Graphically generate data for smøl sequencer"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"fontsize" : 18.0,
+					"id" : "obj-11",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 44.0, 45.0, 107.0, 27.0 ],
+					"text" : "bp.SmølEdit"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 137.0, 332.0, 101.0, 22.0 ],
+					"text" : "prepend contents"
 				}
 
 			}
@@ -470,13 +384,32 @@
 					"id" : "obj-1",
 					"lockeddragscroll" : 0,
 					"maxclass" : "bpatcher",
-					"name" : "bp.MIDIPitchQuantize.maxpat",
+					"name" : "bp.SmølSequencer.maxpat",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "", "", "" ],
+					"patching_rect" : [ 137.0, 377.0, 140.0, 121.0 ],
+					"viewvisibility" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-18",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "bp.SmølEdit.maxpat",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 182.0, 304.0, 140.0, 142.0 ],
-					"varname" : "bp.MIDIQuantize",
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 137.0, 157.0, 140.0, 150.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -484,150 +417,319 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
+					"destination" : [ "obj-26", 0 ],
+					"source" : [ "obj-1", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-35", 0 ],
 					"source" : [ "obj-1", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"source" : [ "obj-11", 0 ]
+					"destination" : [ "obj-16", 0 ],
+					"source" : [ "obj-15", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"source" : [ "obj-13", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
+					"destination" : [ "obj-15", 0 ],
 					"source" : [ "obj-17", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-19", 0 ],
+					"destination" : [ "obj-4", 0 ],
 					"source" : [ "obj-18", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-20", 1 ],
-					"source" : [ "obj-19", 1 ]
+					"destination" : [ "obj-21", 0 ],
+					"source" : [ "obj-20", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
-					"source" : [ "obj-19", 0 ]
+					"source" : [ "obj-22", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"source" : [ "obj-2", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
+					"destination" : [ "obj-18", 1 ],
+					"midpoints" : [ 267.5, 560.0, 323.5, 560.0, 323.5, 146.0, 267.5, 146.0 ],
 					"source" : [ "obj-26", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"source" : [ "obj-27", 0 ]
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-29", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
+					"destination" : [ "obj-7", 0 ],
+					"midpoints" : [ 484.0, 562.0, 390.75, 562.0, 390.75, 146.0, 423.5, 146.0 ],
+					"source" : [ "obj-32", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-37", 0 ],
+					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"midpoints" : [ 146.5, 610.5, 371.0, 610.5, 371.0, 366.0, 423.5, 366.0 ],
+					"source" : [ "obj-37", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-4", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-5", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-32", 0 ],
+					"source" : [ "obj-6", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-36", 0 ],
+					"source" : [ "obj-6", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 1 ],
+					"midpoints" : [ 544.5, 508.0, 576.5, 508.0, 576.5, 146.0, 544.5, 146.0 ],
+					"source" : [ "obj-6", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
-					"source" : [ "obj-563", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"source" : [ "obj-8", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 1 ],
-					"source" : [ "obj-9", 0 ]
+					"source" : [ "obj-7", 0 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
-			"obj-19" : [ "vst~", "vst~", 0 ],
-			"obj-1::obj-14" : [ "live.text", "live.text", 0 ],
-			"obj-1::obj-15" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-1::obj-21" : [ "live.text[1]", "live.text[1]", 0 ],
-			"obj-1::obj-32" : [ "live.text[2]", "live.text[2]", 0 ],
-			"obj-1::obj-50" : [ "number", "number", 0 ],
-			"obj-1::obj-563::obj-3" : [ "live.tab[1]", "live.tab", 0 ],
-			"obj-1::obj-563::obj-556::obj-28" : [ "1076_pitch-bin", "1211_pitch-bin", 0 ],
-			"obj-2::obj-14" : [ "refresh[2]", "refresh", 0 ],
-			"obj-2::obj-2" : [ "MIDIPort", "MIDIPort", 0 ],
-			"obj-563::obj-3" : [ "live.tab", "live.tab", 0 ],
-			"obj-563::obj-556::obj-28" : [ "1097_pitch-bin", "1176_pitch-bin", 0 ],
+			"obj-16::obj-110" : [ "live.text[15]", "live.text[4]", 0 ],
+			"obj-16::obj-33" : [ "textedit[2]", "textedit[3]", 0 ],
+			"obj-16::obj-38" : [ "live.button[2]", "live.button[8]", 0 ],
+			"obj-16::obj-70" : [ "live.text[14]", "live.text", 0 ],
+			"obj-16::obj-71" : [ "live.text[13]", "live.text", 0 ],
+			"obj-17::obj-14" : [ "live.numbox[13]", "live.numbox", 0 ],
+			"obj-17::obj-15" : [ "live.numbox[15]", "live.numbox", 0 ],
+			"obj-17::obj-18" : [ "live.numbox[14]", "live.numbox[2]", 0 ],
+			"obj-17::obj-24" : [ "live.text[18]", "live.text", 0 ],
+			"obj-17::obj-28" : [ "live.tab[3]", "live.tab", 0 ],
+			"obj-17::obj-5" : [ "live.text[16]", "live.text[54]", 0 ],
+			"obj-17::obj-9" : [ "live.text[17]", "live.text[1]", 0 ],
+			"obj-18::obj-14" : [ "live.numbox[9]", "live.numbox", 0 ],
+			"obj-18::obj-15" : [ "live.numbox[8]", "live.numbox", 0 ],
+			"obj-18::obj-18" : [ "live.numbox[7]", "live.numbox[2]", 0 ],
+			"obj-18::obj-24" : [ "live.text[26]", "live.text", 0 ],
+			"obj-18::obj-28" : [ "live.tab[1]", "live.tab", 0 ],
+			"obj-18::obj-5" : [ "live.text[55]", "live.text[54]", 0 ],
+			"obj-18::obj-9" : [ "live.text[1]", "live.text[1]", 0 ],
+			"obj-1::obj-110" : [ "live.text[53]", "live.text[4]", 0 ],
+			"obj-1::obj-33" : [ "textedit[22]", "textedit[3]", 0 ],
+			"obj-1::obj-38" : [ "live.button[20]", "live.button[8]", 0 ],
+			"obj-1::obj-70" : [ "live.text", "live.text", 0 ],
+			"obj-1::obj-71" : [ "live.text[6]", "live.text", 0 ],
+			"obj-21::obj-110" : [ "live.text[20]", "live.text[4]", 0 ],
+			"obj-21::obj-33" : [ "textedit[3]", "textedit[3]", 0 ],
+			"obj-21::obj-38" : [ "live.button[3]", "live.button[8]", 0 ],
+			"obj-21::obj-70" : [ "live.text[21]", "live.text", 0 ],
+			"obj-21::obj-71" : [ "live.text[19]", "live.text", 0 ],
+			"obj-22::obj-14" : [ "live.numbox[16]", "live.numbox", 0 ],
+			"obj-22::obj-15" : [ "live.numbox[18]", "live.numbox", 0 ],
+			"obj-22::obj-18" : [ "live.numbox[17]", "live.numbox[2]", 0 ],
+			"obj-22::obj-24" : [ "live.text[22]", "live.text", 0 ],
+			"obj-22::obj-28" : [ "live.tab[4]", "live.tab", 0 ],
+			"obj-22::obj-5" : [ "live.text[27]", "live.text[54]", 0 ],
+			"obj-22::obj-9" : [ "live.text[28]", "live.text[1]", 0 ],
+			"obj-6::obj-110" : [ "live.text[10]", "live.text[4]", 0 ],
+			"obj-6::obj-33" : [ "textedit[1]", "textedit[3]", 0 ],
+			"obj-6::obj-38" : [ "live.button[1]", "live.button[8]", 0 ],
+			"obj-6::obj-70" : [ "live.text[7]", "live.text", 0 ],
+			"obj-6::obj-71" : [ "live.text[9]", "live.text", 0 ],
+			"obj-7::obj-14" : [ "live.numbox[10]", "live.numbox", 0 ],
+			"obj-7::obj-15" : [ "live.numbox[11]", "live.numbox", 0 ],
+			"obj-7::obj-18" : [ "live.numbox[12]", "live.numbox[2]", 0 ],
+			"obj-7::obj-24" : [ "live.text[11]", "live.text", 0 ],
+			"obj-7::obj-28" : [ "live.tab[2]", "live.tab", 0 ],
+			"obj-7::obj-5" : [ "live.text[12]", "live.text[54]", 0 ],
+			"obj-7::obj-9" : [ "live.text[8]", "live.text[1]", 0 ],
 			"parameterbanks" : 			{
 
 			}
 ,
 			"parameter_overrides" : 			{
-				"obj-1::obj-14" : 				{
-					"parameter_longname" : "live.text"
+				"obj-16::obj-110" : 				{
+					"parameter_longname" : "live.text[15]"
 				}
 ,
-				"obj-1::obj-15" : 				{
-					"parameter_longname" : "live.numbox"
+				"obj-16::obj-38" : 				{
+					"parameter_longname" : "live.button[2]"
 				}
 ,
-				"obj-1::obj-21" : 				{
-					"parameter_longname" : "live.text[1]"
+				"obj-16::obj-70" : 				{
+					"parameter_longname" : "live.text[14]"
 				}
 ,
-				"obj-1::obj-32" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "live.text[2]",
-					"parameter_modmode" : 0,
-					"parameter_shortname" : "live.text[2]",
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
+				"obj-16::obj-71" : 				{
+					"parameter_longname" : "live.text[13]"
 				}
 ,
-				"obj-1::obj-563::obj-3" : 				{
-					"parameter_longname" : "live.tab[1]"
+				"obj-17::obj-14" : 				{
+					"parameter_longname" : "live.numbox[13]"
 				}
 ,
-				"obj-2::obj-2" : 				{
-					"parameter_invisible" : 0,
-					"parameter_modmode" : 0,
-					"parameter_unitstyle" : 10
+				"obj-17::obj-15" : 				{
+					"parameter_longname" : "live.numbox[15]"
+				}
+,
+				"obj-17::obj-18" : 				{
+					"parameter_longname" : "live.numbox[14]"
+				}
+,
+				"obj-17::obj-24" : 				{
+					"parameter_longname" : "live.text[18]"
+				}
+,
+				"obj-17::obj-28" : 				{
+					"parameter_longname" : "live.tab[3]"
+				}
+,
+				"obj-17::obj-5" : 				{
+					"parameter_longname" : "live.text[16]"
+				}
+,
+				"obj-17::obj-9" : 				{
+					"parameter_longname" : "live.text[17]"
+				}
+,
+				"obj-21::obj-110" : 				{
+					"parameter_longname" : "live.text[20]"
+				}
+,
+				"obj-21::obj-38" : 				{
+					"parameter_longname" : "live.button[3]"
+				}
+,
+				"obj-21::obj-70" : 				{
+					"parameter_longname" : "live.text[21]"
+				}
+,
+				"obj-21::obj-71" : 				{
+					"parameter_longname" : "live.text[19]"
+				}
+,
+				"obj-22::obj-14" : 				{
+					"parameter_longname" : "live.numbox[16]"
+				}
+,
+				"obj-22::obj-15" : 				{
+					"parameter_longname" : "live.numbox[18]"
+				}
+,
+				"obj-22::obj-18" : 				{
+					"parameter_longname" : "live.numbox[17]"
+				}
+,
+				"obj-22::obj-24" : 				{
+					"parameter_longname" : "live.text[22]"
+				}
+,
+				"obj-22::obj-28" : 				{
+					"parameter_longname" : "live.tab[4]"
+				}
+,
+				"obj-22::obj-5" : 				{
+					"parameter_longname" : "live.text[27]"
+				}
+,
+				"obj-22::obj-9" : 				{
+					"parameter_longname" : "live.text[28]"
+				}
+,
+				"obj-6::obj-110" : 				{
+					"parameter_longname" : "live.text[10]"
+				}
+,
+				"obj-6::obj-38" : 				{
+					"parameter_longname" : "live.button[1]"
+				}
+,
+				"obj-6::obj-70" : 				{
+					"parameter_longname" : "live.text[7]"
+				}
+,
+				"obj-6::obj-71" : 				{
+					"parameter_longname" : "live.text[9]"
+				}
+,
+				"obj-7::obj-14" : 				{
+					"parameter_longname" : "live.numbox[10]"
+				}
+,
+				"obj-7::obj-15" : 				{
+					"parameter_longname" : "live.numbox[11]"
+				}
+,
+				"obj-7::obj-18" : 				{
+					"parameter_longname" : "live.numbox[12]"
+				}
+,
+				"obj-7::obj-24" : 				{
+					"parameter_longname" : "live.text[11]"
+				}
+,
+				"obj-7::obj-28" : 				{
+					"parameter_longname" : "live.tab[2]"
+				}
+,
+				"obj-7::obj-5" : 				{
+					"parameter_longname" : "live.text[12]"
+				}
+,
+				"obj-7::obj-9" : 				{
+					"parameter_longname" : "live.text[8]"
 				}
 
 			}
@@ -636,84 +738,21 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "bp.MIDIPitchQuantize.maxpat",
+				"name" : "bp.SmølEdit.maxhelp.maxsnap",
+				"bootpath" : "~/Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../../Snapshots",
+				"type" : "mx@s",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.SmølEdit.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Satori Generators/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "bp.listnearest.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/Satori Generators/patchers",
-				"patcherrelativepath" : "../patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bp.kspitch.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
-				"patcherrelativepath" : "../../hin/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bp.bintoks.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
-				"patcherrelativepath" : "../../hin/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bp.kstobin.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
-				"patcherrelativepath" : "../../hin/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bp.bintopc.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
-				"patcherrelativepath" : "../../hin/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bp.pctobin.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
-				"patcherrelativepath" : "../../hin/patchers",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "FM8.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "FM8_20190704.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "FM8_20200211.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "Massive X.maxsnap",
-				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../Snapshots",
-				"type" : "mx@s",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "bp.MIDIInput.maxpat",
+				"name" : "bp.SmølSequencer.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Satori Generators/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
@@ -721,6 +760,152 @@
 			}
  ],
 		"autosave" : 0,
+		"snapshot" : 		{
+			"filetype" : "C74Snapshot",
+			"version" : 2,
+			"minorversion" : 0,
+			"name" : "snapshotlist",
+			"origin" : "jpatcher",
+			"type" : "list",
+			"subtype" : "Undefined",
+			"embed" : 1,
+			"snapshot" : 			{
+				"valuedictionary" : 				{
+					"parameter_values" : 					{
+						"live.numbox[10]" : 0.0,
+						"live.numbox[11]" : 127.0,
+						"live.numbox[12]" : 18.0,
+						"live.numbox[13]" : 0.0,
+						"live.numbox[14]" : 16.0,
+						"live.numbox[15]" : 1.0,
+						"live.numbox[16]" : -1.0,
+						"live.numbox[17]" : 16.0,
+						"live.numbox[18]" : 1.0,
+						"live.numbox[7]" : 16.0,
+						"live.numbox[8]" : 1.0,
+						"live.numbox[9]" : 0.0,
+						"live.tab[1]" : 0.0,
+						"live.tab[2]" : 0.0,
+						"live.tab[3]" : 1.0,
+						"live.tab[4]" : 1.0,
+						"live.text" : 0.0,
+						"live.text[10]" : 0.0,
+						"live.text[11]" : 0.0,
+						"live.text[12]" : 0.0,
+						"live.text[13]" : 0.0,
+						"live.text[14]" : 0.0,
+						"live.text[15]" : 0.0,
+						"live.text[16]" : 0.0,
+						"live.text[17]" : 1.0,
+						"live.text[18]" : 0.0,
+						"live.text[19]" : 0.0,
+						"live.text[1]" : 1.0,
+						"live.text[20]" : 0.0,
+						"live.text[21]" : 0.0,
+						"live.text[22]" : 1.0,
+						"live.text[26]" : 0.0,
+						"live.text[27]" : 0.0,
+						"live.text[28]" : 1.0,
+						"live.text[53]" : 0.0,
+						"live.text[55]" : 0.0,
+						"live.text[6]" : 0.0,
+						"live.text[7]" : 0.0,
+						"live.text[8]" : 0.0,
+						"live.text[9]" : 0.0,
+						"blob" : 						{
+							"textedit[1]" : [ 65, 80, 77, 68, 59, 56, 30, 56, 60, 67, 80, 68, 54, 56, 77, 0, 69 ],
+							"textedit[22]" : [ 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 ],
+							"textedit[2]" : [ 0.238095238804817, 0.583333313465118, 0.607142865657806, 0.428571432828903, 0.214285716414452, 0.273809522390366, 0.357142865657806, 0.380952388048172, 0.392857134342194, 0.416666656732559, 0.297619044780731, 0.202380955219269, 0.273809522390366, 0.357142865657806, 0.440476179122925, 0.440476179122925 ],
+							"textedit[3]" : [ 0.214285716414452, 0.428571432828903, 0.642857134342194, 0.642857134342194, 0.380952388048172, -0.047619048506021, -0.476190477609634, -0.523809552192688, -0.333333343267441, -0.047619048506021, 0.190476194024086, 0.476190477609634, 0.476190477609634, 0.476190477609634, 0.214285716414452, -0.095238097012043 ]
+						}
+
+					}
+
+				}
+
+			}
+,
+			"snapshotlist" : 			{
+				"current_snapshot" : 0,
+				"entries" : [ 					{
+						"filetype" : "C74Snapshot",
+						"version" : 2,
+						"minorversion" : 0,
+						"name" : "bp.SmølEdit.maxhelp",
+						"origin" : "bp.SmølEdit.maxhelp",
+						"type" : "patcher",
+						"subtype" : "Undefined",
+						"embed" : 1,
+						"snapshot" : 						{
+							"valuedictionary" : 							{
+								"parameter_values" : 								{
+									"live.numbox[10]" : 0.0,
+									"live.numbox[11]" : 127.0,
+									"live.numbox[12]" : 18.0,
+									"live.numbox[13]" : 0.0,
+									"live.numbox[14]" : 16.0,
+									"live.numbox[15]" : 1.0,
+									"live.numbox[16]" : -1.0,
+									"live.numbox[17]" : 16.0,
+									"live.numbox[18]" : 1.0,
+									"live.numbox[7]" : 16.0,
+									"live.numbox[8]" : 1.0,
+									"live.numbox[9]" : 0.0,
+									"live.tab[1]" : 0.0,
+									"live.tab[2]" : 0.0,
+									"live.tab[3]" : 1.0,
+									"live.tab[4]" : 1.0,
+									"live.text" : 0.0,
+									"live.text[10]" : 0.0,
+									"live.text[11]" : 0.0,
+									"live.text[12]" : 0.0,
+									"live.text[13]" : 0.0,
+									"live.text[14]" : 0.0,
+									"live.text[15]" : 0.0,
+									"live.text[16]" : 0.0,
+									"live.text[17]" : 1.0,
+									"live.text[18]" : 0.0,
+									"live.text[19]" : 0.0,
+									"live.text[1]" : 1.0,
+									"live.text[20]" : 0.0,
+									"live.text[21]" : 0.0,
+									"live.text[22]" : 1.0,
+									"live.text[26]" : 0.0,
+									"live.text[27]" : 0.0,
+									"live.text[28]" : 1.0,
+									"live.text[53]" : 0.0,
+									"live.text[55]" : 0.0,
+									"live.text[6]" : 0.0,
+									"live.text[7]" : 0.0,
+									"live.text[8]" : 0.0,
+									"live.text[9]" : 0.0,
+									"blob" : 									{
+										"textedit[1]" : [ 65, 80, 77, 68, 59, 56, 30, 56, 60, 67, 80, 68, 54, 56, 77, 0, 69 ],
+										"textedit[22]" : [ 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0 ],
+										"textedit[2]" : [ 0.238095238804817, 0.583333313465118, 0.607142865657806, 0.428571432828903, 0.214285716414452, 0.273809522390366, 0.357142865657806, 0.380952388048172, 0.392857134342194, 0.416666656732559, 0.297619044780731, 0.202380955219269, 0.273809522390366, 0.357142865657806, 0.440476179122925, 0.440476179122925 ],
+										"textedit[3]" : [ 0.214285716414452, 0.428571432828903, 0.642857134342194, 0.642857134342194, 0.380952388048172, -0.047619048506021, -0.476190477609634, -0.523809552192688, -0.333333343267441, -0.047619048506021, 0.190476194024086, 0.476190477609634, 0.476190477609634, 0.476190477609634, 0.214285716414452, -0.095238097012043 ]
+									}
+
+								}
+
+							}
+
+						}
+,
+						"fileref" : 						{
+							"name" : "bp.SmølEdit.maxhelp",
+							"filename" : "bp.SmølEdit.maxhelp.maxsnap",
+							"filepath" : "~/Documents/Max 8/Snapshots",
+							"filepos" : -1,
+							"snapshotfileid" : "18eefe95f12e409d9894188cc006cee8"
+						}
+
+					}
+ ]
+			}
+
+		}
+,
 		"styles" : [ 			{
 				"name" : "AudioStatus_Menu",
 				"default" : 				{

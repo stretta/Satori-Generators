@@ -4,13 +4,13 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 1,
-			"revision" : 6,
+			"revision" : 11,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 635.0, 191.0, 626.0, 675.0 ],
+		"rect" : [ 178.0, 95.0, 634.0, 694.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -54,7 +54,7 @@
 						"valueof" : 						{
 							"parameter_enum" : [ "off", "on" ],
 							"parameter_invisible" : 2,
-							"parameter_longname" : "live.button[1]",
+							"parameter_longname" : "live.button[8]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.button",
 							"parameter_type" : 2
@@ -76,7 +76,7 @@
 					"orientation" : 0,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 492.19920814037323, 526.0, 20.0, 140.0 ],
+					"patching_rect" : [ 492.19920814037323, 526.0, 65.0, 31.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 100.19920814037323, 5.535711407661438, 22.25, 15.0 ],
 					"setstyle" : 1,
@@ -149,7 +149,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-20",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -354,7 +354,7 @@
 							"parameter_initial_enable" : 1,
 							"parameter_invisible" : 1,
 							"parameter_longname" : "number",
-							"parameter_shortname" : "number",
+							"parameter_shortname" : "ticks",
 							"parameter_type" : 3
 						}
 
@@ -547,22 +547,7 @@
 				}
 
 			}
- ],
-		"parameters" : 		{
-			"obj-10" : [ "live.text[1]", "live.text", 0 ],
-			"obj-21" : [ "live.numbox[1]", "Amount", 0 ],
-			"obj-3" : [ "number", "number", 0 ],
-			"obj-77" : [ "live.button[1]", "live.button", 0 ],
-			"obj-9" : [ "live.text", "live.text", 0 ],
-			"parameterbanks" : 			{
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
-		"dependency_cache" : [  ],
-		"autosave" : 0
+ ]
 	}
 
 }
