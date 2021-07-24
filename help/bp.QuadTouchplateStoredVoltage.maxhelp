@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 477.0, 89.0, 868.0, 688.0 ],
+		"rect" : [ 59.0, 104.0, 978.0, 582.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,195 +40,102 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 471.0, 23.0, 58.0, 22.0 ],
-					"text" : "loadbang"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-36",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 39.0, 52.0, 161.0, 20.0 ],
-					"text" : "Phasor-driven list sequencer"
+					"patching_rect" : [ 48.0, 54.0, 248.0, 20.0 ],
+					"presentation_linecount" : 2,
+					"text" : "Eight stage, four-output 1v/oct CV storage"
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"fontsize" : 18.0,
-					"id" : "obj-6",
+					"id" : "obj-27",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 39.0, 23.0, 96.0, 27.0 ],
-					"text" : "bp.PLSeq"
+					"patching_rect" : [ 48.0, 25.0, 278.0, 27.0 ],
+					"presentation_linecount" : 4,
+					"text" : "bp.QuadTouchplateStoredVoltage"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-59",
+					"id" : "obj-26",
+					"maxclass" : "number",
+					"maximum" : 7,
+					"minimum" : 0,
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 460.870588235294122, 117.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 369.129411764705878, 117.0, 49.0, 22.0 ],
+					"text" : "random"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 314.129411764705878, 117.0, 29.5, 22.0 ],
+					"text" : "dec"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 261.129411764705878, 117.0, 29.5, 22.0 ],
+					"text" : "inc"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bubble" : 1,
+					"bubbleside" : 3,
+					"id" : "obj-11",
+					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 497.0, 184.0, 53.0, 20.0 ],
-					"text" : "list input"
+					"patching_rect" : [ 48.0, 232.0, 150.0, 37.0 ],
+					"text" : "click the 'touchplate' to put that stage in focus"
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-58",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 213.0, 174.0, 137.0, 20.0 ],
-					"text" : "phasor input (signal 0 1)"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "A stereo/dual mono audio output chooser.",
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-3",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "AudioOutput.maxpat",
-					"numinlets" : 3,
-					"numoutlets" : 3,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 350.0, 678.0, 69.0, 29.0 ],
-					"varname" : "AudioOutput",
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"annotation" : "A simple stereo audio mixing module. ",
-					"args" : [ "@type", "output" ],
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-5",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "AudioMix.maxpat",
-					"numinlets" : 3,
-					"numoutlets" : 3,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 350.0, 528.0, 69.0, 139.0 ],
-					"varname" : "AudioMix",
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-57",
+					"id" : "obj-9",
 					"maxclass" : "button",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 350.0, 434.0, 24.0, 24.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-54",
-					"linecount" : 6,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 120.0, 233.300017000000025, 207.0, 87.0 ],
-					"text" : "Pulse is derived from the number of elements in the incoming list. Each element is a 'stage' in the sequencer and the stages are laid out evenly across the 0.0 to 1.0 range of the input phasor."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-53",
-					"linecount" : 5,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 403.003450863067883, 365.0, 213.0, 74.0 ],
-					"text" : "Unlike the smøl sequencer, the phase lock sequencer does not have any playback controls to step through the sequence. The address is derrived entirely from the phasor."
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"bgmode" : 0,
-					"border" : 0,
-					"clickthrough" : 0,
-					"enablehscroll" : 0,
-					"enablevscroll" : 0,
-					"id" : "obj-51",
-					"lockeddragscroll" : 0,
-					"maxclass" : "bpatcher",
-					"name" : "bp.PLSeq.maxpat",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"offset" : [ 0.0, 0.0 ],
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 350.0, 211.300017000000025, 140.0, 109.0 ],
-					"viewvisibility" : 1
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-272",
-					"linecount" : 8,
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 471.0, 60.349166810512543, 169.0, 116.0 ],
-					"text" : "0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-77",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 350.0, 478.20010445384969, 39.0, 22.0 ],
-					"text" : "click~"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-67",
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 243.003450863067883, 77.033377110958099, 93.0, 20.0 ],
-					"text" : "phasor rate (hz)"
+					"patching_rect" : [ 210.879411764705878, 117.0, 24.0, 24.0 ]
 				}
 
 			}
@@ -237,150 +144,231 @@
 					"fontface" : 0,
 					"fontname" : "Arial",
 					"fontsize" : 12.0,
-					"id" : "obj-68",
+					"id" : "obj-7",
 					"maxclass" : "number~",
-					"mode" : 1,
+					"mode" : 2,
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "float" ],
-					"patching_rect" : [ 350.166670083999634, 77.033377110958099, 56.0, 22.0 ],
-					"sig" : 0.019
+					"patching_rect" : [ 582.611764705882251, 498.0, 56.0, 22.0 ],
+					"sig" : 0.0
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-29",
-					"maxclass" : "newobj",
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-6",
+					"maxclass" : "number~",
+					"mode" : 2,
 					"numinlets" : 2,
 					"numoutlets" : 2,
-					"outlettype" : [ "bang", "" ],
-					"patching_rect" : [ 350.0, 396.20010445384969, 34.0, 22.0 ],
-					"text" : "sel 1"
+					"outlettype" : [ "signal", "float" ],
+					"patching_rect" : [ 521.741176470588243, 498.0, 56.0, 22.0 ],
+					"sig" : 0.0
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-28",
-					"maxclass" : "newobj",
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-5",
+					"maxclass" : "number~",
+					"mode" : 2,
 					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "int" ],
-					"patching_rect" : [ 350.0, 350.20010445384969, 29.5, 22.0 ],
-					"text" : "> 0"
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "float" ],
+					"patching_rect" : [ 460.870588235294122, 498.0, 56.0, 22.0 ],
+					"sig" : 0.0
 				}
 
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-22",
-					"maxclass" : "newobj",
+					"fontface" : 0,
+					"fontname" : "Arial",
+					"fontsize" : 12.0,
+					"id" : "obj-4",
+					"maxclass" : "number~",
+					"mode" : 2,
 					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "float" ],
+					"patching_rect" : [ 400.0, 498.0, 56.0, 22.0 ],
+					"sig" : 0.0
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 4,
+					"outlettype" : [ "signal", "signal", "signal", "signal" ],
+					"patching_rect" : [ 400.0, 437.0, 201.611764705882479, 22.0 ],
+					"text" : "mc.unpack~ 4"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "scope~",
+					"numinlets" : 2,
+					"numoutlets" : 0,
+					"patching_rect" : [ 213.0, 437.0, 130.0, 130.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"bgmode" : 0,
+					"border" : 0,
+					"clickthrough" : 0,
+					"enablehscroll" : 0,
+					"enablevscroll" : 0,
+					"id" : "obj-55",
+					"lockeddragscroll" : 0,
+					"maxclass" : "bpatcher",
+					"name" : "bp.QuadTouchplateStoredVoltage.maxpat",
+					"numinlets" : 1,
 					"numoutlets" : 1,
-					"outlettype" : [ "signal" ],
-					"patching_rect" : [ 350.0, 137.033376812934875, 52.0, 22.0 ],
-					"text" : "phasor~"
+					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "multichannelsignal" ],
+					"patching_rect" : [ 213.0, 212.0, 736.000001192092896, 196.000001192092896 ],
+					"viewvisibility" : 1
 				}
 
 			}
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-272", 0 ],
-					"source" : [ "obj-1", 0 ]
+					"destination" : [ "obj-55", 0 ],
+					"source" : [ "obj-13", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-51", 0 ],
-					"source" : [ "obj-22", 0 ]
+					"destination" : [ "obj-55", 0 ],
+					"source" : [ "obj-14", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-51", 1 ],
-					"source" : [ "obj-272", 0 ]
+					"destination" : [ "obj-55", 0 ],
+					"source" : [ "obj-16", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-29", 0 ],
-					"source" : [ "obj-28", 0 ]
+					"destination" : [ "obj-55", 0 ],
+					"source" : [ "obj-26", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-57", 0 ],
-					"source" : [ "obj-29", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 1 ],
-					"source" : [ "obj-5", 1 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-28", 0 ],
-					"source" : [ "obj-51", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-77", 0 ],
-					"source" : [ "obj-57", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-22", 0 ],
-					"source" : [ "obj-68", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-5", 1 ],
-					"order" : 0,
-					"source" : [ "obj-77", 0 ]
+					"destination" : [ "obj-4", 0 ],
+					"source" : [ "obj-3", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
+					"source" : [ "obj-3", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-3", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 0 ],
+					"source" : [ "obj-3", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-2", 0 ],
 					"order" : 1,
-					"source" : [ "obj-77", 0 ]
+					"source" : [ "obj-55", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"order" : 0,
+					"source" : [ "obj-55", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-55", 0 ],
+					"source" : [ "obj-9", 0 ]
 				}
 
 			}
  ],
 		"parameters" : 		{
-			"obj-3::obj-24" : [ "output", "Output", 0 ],
-			"obj-51::obj-3" : [ "live.button[18]", "live.button", 0 ],
-			"obj-5::obj-113" : [ "pan", "Pan", 0 ],
-			"obj-5::obj-114" : [ "solo", "Solo", 0 ],
-			"obj-5::obj-115" : [ "active", "Active", 0 ],
-			"obj-5::obj-116" : [ "gain", "Gain", 0 ],
-			"obj-5::obj-30" : [ "qlist", "Qlist", 0 ],
-			"obj-5::obj-4" : [ "setname", "Setname", 0 ],
+			"obj-55::obj-110" : [ "live.text[11]", "live.text[4]", 0 ],
+			"obj-55::obj-120::obj-61" : [ "number", "number", 0 ],
+			"obj-55::obj-302::obj-61" : [ "number[26]", "number", 0 ],
+			"obj-55::obj-305::obj-61" : [ "number[42]", "number", 0 ],
+			"obj-55::obj-308::obj-61" : [ "number[41]", "number", 0 ],
+			"obj-55::obj-311::obj-61" : [ "number[25]", "number", 0 ],
+			"obj-55::obj-314::obj-61" : [ "number[40]", "number", 0 ],
+			"obj-55::obj-317::obj-61" : [ "number[39]", "number", 0 ],
+			"obj-55::obj-320::obj-61" : [ "number[24]", "number", 0 ],
+			"obj-55::obj-323" : [ "number[56]", "number[33]", 0 ],
+			"obj-55::obj-325" : [ "live.tab[3]", "live.tab", 0 ],
+			"obj-55::obj-326::obj-61" : [ "number[38]", "number", 0 ],
+			"obj-55::obj-38" : [ "live.button[1]", "live.button[8]", 0 ],
+			"obj-55::obj-4" : [ "live.tab[1]", "live.tab", 0 ],
+			"obj-55::obj-413::obj-61" : [ "number[53]", "number", 0 ],
+			"obj-55::obj-416::obj-61" : [ "number[31]", "number", 0 ],
+			"obj-55::obj-419::obj-61" : [ "number[52]", "number", 0 ],
+			"obj-55::obj-422::obj-61" : [ "number[51]", "number", 0 ],
+			"obj-55::obj-425::obj-61" : [ "number[30]", "number", 0 ],
+			"obj-55::obj-428::obj-61" : [ "number[50]", "number", 0 ],
+			"obj-55::obj-431::obj-61" : [ "number[49]", "number", 0 ],
+			"obj-55::obj-434" : [ "number[54]", "number[35]", 0 ],
+			"obj-55::obj-436" : [ "live.tab[5]", "live.tab", 0 ],
+			"obj-55::obj-437::obj-61" : [ "number[29]", "number", 0 ],
+			"obj-55::obj-450::obj-61" : [ "number[48]", "number", 0 ],
+			"obj-55::obj-453::obj-61" : [ "number[47]", "number", 0 ],
+			"obj-55::obj-456::obj-61" : [ "number[28]", "number", 0 ],
+			"obj-55::obj-459::obj-61" : [ "number[46]", "number", 0 ],
+			"obj-55::obj-462::obj-61" : [ "number[45]", "number", 0 ],
+			"obj-55::obj-465::obj-61" : [ "number[27]", "number", 0 ],
+			"obj-55::obj-468::obj-61" : [ "number[44]", "number", 0 ],
+			"obj-55::obj-471" : [ "number[55]", "number[34]", 0 ],
+			"obj-55::obj-473" : [ "live.tab[6]", "live.tab", 0 ],
+			"obj-55::obj-474::obj-61" : [ "number[43]", "number", 0 ],
+			"obj-55::obj-76::obj-61" : [ "number[22]", "number", 0 ],
+			"obj-55::obj-81::obj-61" : [ "number[35]", "number", 0 ],
+			"obj-55::obj-84::obj-61" : [ "number[33]", "number", 0 ],
+			"obj-55::obj-86" : [ "number[32]", "number[32]", 0 ],
+			"obj-55::obj-88::obj-61" : [ "number[37]", "number", 0 ],
+			"obj-55::obj-91::obj-61" : [ "number[34]", "number", 0 ],
+			"obj-55::obj-94::obj-61" : [ "number[23]", "number", 0 ],
+			"obj-55::obj-97::obj-61" : [ "number[36]", "number", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -389,28 +377,168 @@
 		}
 ,
 		"dependency_cache" : [ 			{
-				"name" : "bp.PLSeq.maxpat",
+				"name" : "bp.QuadTouchplateStoredVoltage.maxhelp.maxsnap",
+				"bootpath" : "~/Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../../Snapshots",
+				"type" : "mx@s",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "bp.QuadTouchplateStoredVoltage.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/Satori Generators/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "AudioMix.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../AudioMix/patchers",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "AudioOutput.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../AudioMix/patchers",
+				"name" : "bp.3way_switch.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/Satori-Generators-Private/patchers",
+				"patcherrelativepath" : "../../Satori-Generators-Private/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
  ],
 		"autosave" : 0,
+		"snapshot" : 		{
+			"filetype" : "C74Snapshot",
+			"version" : 2,
+			"minorversion" : 0,
+			"name" : "snapshotlist",
+			"origin" : "jpatcher",
+			"type" : "list",
+			"subtype" : "Undefined",
+			"embed" : 1,
+			"snapshot" : 			{
+				"valuedictionary" : 				{
+					"parameter_values" : 					{
+						"live.tab[1]" : 1.0,
+						"live.tab[3]" : 1.0,
+						"live.tab[5]" : 1.0,
+						"live.tab[6]" : 1.0,
+						"live.text[11]" : 0.0,
+						"blob" : 						{
+							"number" : [ 0.0 ],
+							"number[22]" : [ 2.0 ],
+							"number[23]" : [ 4.0 ],
+							"number[24]" : [ 12.0 ],
+							"number[25]" : [ 0.0 ],
+							"number[26]" : [ 5.0 ],
+							"number[27]" : [ 36.0 ],
+							"number[28]" : [ 0.0 ],
+							"number[29]" : [ 24.0 ],
+							"number[30]" : [ 24.0 ],
+							"number[31]" : [ 24.0 ],
+							"number[32]" : [ 10.131 ],
+							"number[33]" : [ 5.0 ],
+							"number[34]" : [ 2.0 ],
+							"number[35]" : [ 2.0 ],
+							"number[36]" : [ 2.0 ],
+							"number[37]" : [ 0.0 ],
+							"number[38]" : [ 12.0 ],
+							"number[39]" : [ 10.0 ],
+							"number[40]" : [ 12.0 ],
+							"number[41]" : [ 5.0 ],
+							"number[42]" : [ 7.0 ],
+							"number[43]" : [ 2.0 ],
+							"number[44]" : [ 36.0 ],
+							"number[45]" : [ 36.0 ],
+							"number[46]" : [ 0.0 ],
+							"number[47]" : [ 0.0 ],
+							"number[48]" : [ 0.0 ],
+							"number[49]" : [ 24.0 ],
+							"number[50]" : [ 24.0 ],
+							"number[51]" : [ 24.0 ],
+							"number[52]" : [ 24.0 ],
+							"number[53]" : [ 24.0 ],
+							"number[54]" : [ 10.131 ],
+							"number[55]" : [ 10.131 ],
+							"number[56]" : [ 10.131 ]
+						}
+
+					}
+
+				}
+
+			}
+,
+			"snapshotlist" : 			{
+				"current_snapshot" : 0,
+				"entries" : [ 					{
+						"filetype" : "C74Snapshot",
+						"version" : 2,
+						"minorversion" : 0,
+						"name" : "bp.QuadTouchplateStoredVoltage.maxhelp",
+						"origin" : "bp.QuadTouchplateStoredVoltage.maxhelp",
+						"type" : "patcher",
+						"subtype" : "Undefined",
+						"embed" : 1,
+						"snapshot" : 						{
+							"valuedictionary" : 							{
+								"parameter_values" : 								{
+									"live.tab[1]" : 1.0,
+									"live.tab[3]" : 1.0,
+									"live.tab[5]" : 1.0,
+									"live.tab[6]" : 1.0,
+									"live.text[11]" : 0.0,
+									"blob" : 									{
+										"number" : [ 0.0 ],
+										"number[22]" : [ 2.0 ],
+										"number[23]" : [ 4.0 ],
+										"number[24]" : [ 12.0 ],
+										"number[25]" : [ 0.0 ],
+										"number[26]" : [ 5.0 ],
+										"number[27]" : [ 36.0 ],
+										"number[28]" : [ 0.0 ],
+										"number[29]" : [ 24.0 ],
+										"number[30]" : [ 24.0 ],
+										"number[31]" : [ 24.0 ],
+										"number[32]" : [ 10.131 ],
+										"number[33]" : [ 5.0 ],
+										"number[34]" : [ 2.0 ],
+										"number[35]" : [ 2.0 ],
+										"number[36]" : [ 2.0 ],
+										"number[37]" : [ 0.0 ],
+										"number[38]" : [ 12.0 ],
+										"number[39]" : [ 10.0 ],
+										"number[40]" : [ 12.0 ],
+										"number[41]" : [ 5.0 ],
+										"number[42]" : [ 7.0 ],
+										"number[43]" : [ 2.0 ],
+										"number[44]" : [ 36.0 ],
+										"number[45]" : [ 36.0 ],
+										"number[46]" : [ 0.0 ],
+										"number[47]" : [ 0.0 ],
+										"number[48]" : [ 0.0 ],
+										"number[49]" : [ 24.0 ],
+										"number[50]" : [ 24.0 ],
+										"number[51]" : [ 24.0 ],
+										"number[52]" : [ 24.0 ],
+										"number[53]" : [ 24.0 ],
+										"number[54]" : [ 10.131 ],
+										"number[55]" : [ 10.131 ],
+										"number[56]" : [ 10.131 ]
+									}
+
+								}
+
+							}
+
+						}
+,
+						"fileref" : 						{
+							"name" : "bp.QuadTouchplateStoredVoltage.maxhelp",
+							"filename" : "bp.QuadTouchplateStoredVoltage.maxhelp.maxsnap",
+							"filepath" : "~/Documents/Max 8/Snapshots",
+							"filepos" : -1,
+							"snapshotfileid" : "77c28ac949f19b2152fe3f85017c3bd4"
+						}
+
+					}
+ ]
+			}
+
+		}
+,
 		"styles" : [ 			{
 				"name" : "AudioStatus_Menu",
 				"default" : 				{
@@ -568,6 +696,11 @@
 			}
 , 			{
 				"name" : "Max 12 Regular-1",
+				"parentstyle" : "",
+				"multi" : 0
+			}
+, 			{
+				"name" : "Max 12 Regular-1-1",
 				"default" : 				{
 					"bgfillcolor" : 					{
 						"type" : "gradient",
@@ -580,11 +713,6 @@
 
 				}
 ,
-				"parentstyle" : "",
-				"multi" : 0
-			}
-, 			{
-				"name" : "Max 12 Regular-1-1",
 				"parentstyle" : "",
 				"multi" : 0
 			}
