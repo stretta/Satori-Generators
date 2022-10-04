@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 11,
+			"minor" : 2,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 104.0, 677.0, 537.0 ],
+		"rect" : [ 59.0, 100.0, 677.0, 537.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -47,6 +47,7 @@
 					"enablevscroll" : 0,
 					"id" : "obj-14",
 					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "bp.MIDIOutput.maxpat",
 					"numinlets" : 1,
@@ -64,7 +65,7 @@
 					"numinlets" : 7,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "" ],
-					"patching_rect" : [ 62.0, 211.0, 82.0, 22.0 ],
+					"patching_rect" : [ 62.0, 223.0, 82.0, 22.0 ],
 					"text" : "midiformat"
 				}
 
@@ -76,7 +77,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 62.0, 183.0, 46.0, 22.0 ],
+					"patching_rect" : [ 62.0, 183.0, 101.0, 22.0 ],
 					"text" : "pack i i"
 				}
 
@@ -136,8 +137,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 354.0, 91.0, 187.0, 87.0 ],
-					"text" : "For use as a master reference for TTID defination. \n\nAdd analysis input\n\nadd database editing"
+					"patching_rect" : [ 354.0, 91.0, 190.0, 87.0 ],
+					"text" : "For use as a primary reference for TTID defination. \n\nAdd analysis input\n\nadd database editing"
 				}
 
 			}
@@ -150,6 +151,7 @@
 					"enablevscroll" : 0,
 					"id" : "obj-5",
 					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "bp.MIDIPitchQuantize.maxpat",
 					"numinlets" : 2,
@@ -183,6 +185,7 @@
 					"enablevscroll" : 0,
 					"id" : "obj-1",
 					"lockeddragscroll" : 0,
+					"lockedsize" : 0,
 					"maxclass" : "bpatcher",
 					"name" : "bp.ScaleFriend.maxpat",
 					"numinlets" : 0,
@@ -273,17 +276,18 @@
 			"obj-14::obj-5" : [ "refresh[1]", "refresh", 0 ],
 			"obj-1::obj-178::obj-231" : [ "live.text[1]", "live.text", 0 ],
 			"obj-1::obj-178::obj-251" : [ "live.text", "live.text", 0 ],
-			"obj-1::obj-178::obj-265::obj-556::obj-28" : [ "1128_pitch-bin", "1128_pitch-bin", 0 ],
-			"obj-1::obj-178::obj-563::obj-556::obj-28" : [ "1155_pitch-bin", "1155_pitch-bin", 0 ],
+			"obj-1::obj-178::obj-265::obj-556::obj-28" : [ "1128_pitch-bin", "1204_pitch-bin", 0 ],
+			"obj-1::obj-178::obj-563::obj-556::obj-28" : [ "1155_pitch-bin", "1231_pitch-bin", 0 ],
 			"obj-1::obj-226::obj-3" : [ "live.tab", "live.tab", 0 ],
-			"obj-1::obj-226::obj-556::obj-28" : [ "1124_pitch-bin", "1124_pitch-bin", 0 ],
+			"obj-1::obj-226::obj-556::obj-28" : [ "1124_pitch-bin", "1200_pitch-bin", 0 ],
 			"obj-1::obj-297" : [ "edit_generator[2]", "live.text[10]", 0 ],
 			"obj-5::obj-14" : [ "live.text[30]", "live.text", 0 ],
 			"obj-5::obj-15" : [ "live.numbox[31]", "live.numbox", 0 ],
 			"obj-5::obj-21" : [ "live.text[29]", "live.text[1]", 0 ],
+			"obj-5::obj-32" : [ "live.text[2]", "live.text[2]", 0 ],
 			"obj-5::obj-50" : [ "number[19]", "number", 0 ],
 			"obj-5::obj-563::obj-3" : [ "live.tab[1]", "live.tab", 0 ],
-			"obj-5::obj-563::obj-556::obj-28" : [ "1197_pitch-bin", "1197_pitch-bin", 0 ],
+			"obj-5::obj-563::obj-556::obj-28" : [ "1197_pitch-bin", "1195_pitch-bin", 0 ],
 			"parameterbanks" : 			{
 
 			}
@@ -293,6 +297,18 @@
 					"parameter_invisible" : 0,
 					"parameter_modmode" : 0,
 					"parameter_unitstyle" : 10
+				}
+,
+				"obj-5::obj-14" : 				{
+					"parameter_longname" : "live.text[30]"
+				}
+,
+				"obj-5::obj-15" : 				{
+					"parameter_longname" : "live.numbox[31]"
+				}
+,
+				"obj-5::obj-21" : 				{
+					"parameter_longname" : "live.text[29]"
 				}
 ,
 				"obj-5::obj-563::obj-3" : 				{
@@ -306,7 +322,7 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "bp.ScaleFriend.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/Satori-Generators/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/Satori Generators/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
@@ -334,29 +350,29 @@
 			}
 , 			{
 				"name" : "bp.kspitch.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
-				"patcherrelativepath" : "../../hin/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/Satori-Generators-Private/patchers",
+				"patcherrelativepath" : "../../Satori-Generators-Private/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bp.MIDIPitchQuantize.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/Satori-Generators/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/Satori Generators/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bp.listnearest.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/Satori-Generators/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/Satori Generators/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "bp.bintopc.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/hin/patchers",
-				"patcherrelativepath" : "../../hin/patchers",
+				"bootpath" : "~/Documents/Max 8/Projects/Artifact 003/patchers",
+				"patcherrelativepath" : "../../../Projects/Artifact 003/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -369,7 +385,7 @@
 			}
 , 			{
 				"name" : "bp.MIDIOutput.maxpat",
-				"bootpath" : "~/Documents/Max 8/Packages/Satori-Generators/patchers",
+				"bootpath" : "~/Documents/Max 8/Packages/Satori Generators/patchers",
 				"patcherrelativepath" : "../patchers",
 				"type" : "JSON",
 				"implicit" : 1
